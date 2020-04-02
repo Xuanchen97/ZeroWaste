@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4333A9FA3A77ECD2798A97CD /* Pods_garbageSort.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D22D49DA347362C7174154A /* Pods_garbageSort.framework */; };
 		521F17E9241734B80046985E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F17E8241734B80046985E /* AppDelegate.swift */; };
 		521F17EB241734B80046985E /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 521F17EA241734B80046985E /* art.scnassets */; };
 		521F17ED241734B80046985E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F17EC241734B80046985E /* ViewController.swift */; };
@@ -18,11 +17,12 @@
 		521F1804242ECC400046985E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521F17EE241734B80046985E /* Main.storyboard */; };
 		521F1827242EDE540046985E /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F1826242EDE540046985E /* ScanViewController.swift */; };
 		521F1829242EDFB10046985E /* GarbageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 521F1828242EDFB00046985E /* GarbageClassifier.mlmodel */; };
+		588D18AB51968C1EAEFC0536 /* libPods-garbageSort.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC04561E43BA3F603ADFCA1 /* libPods-garbageSort.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		07194E137E83043B004E300D /* Pods-garbageSort.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-garbageSort.debug.xcconfig"; path = "Target Support Files/Pods-garbageSort/Pods-garbageSort.debug.xcconfig"; sourceTree = "<group>"; };
-		3D22D49DA347362C7174154A /* Pods_garbageSort.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_garbageSort.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CC04561E43BA3F603ADFCA1 /* libPods-garbageSort.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-garbageSort.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		521F17E5241734B80046985E /* garbageSort.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = garbageSort.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		521F17E8241734B80046985E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		521F17EA241734B80046985E /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -43,7 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4333A9FA3A77ECD2798A97CD /* Pods_garbageSort.framework in Frameworks */,
+				588D18AB51968C1EAEFC0536 /* libPods-garbageSort.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +56,6 @@
 				07194E137E83043B004E300D /* Pods-garbageSort.debug.xcconfig */,
 				9F8275DD34B06AF5B2587CC8 /* Pods-garbageSort.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -123,7 +122,7 @@
 		F64645C774AC570A7C551D13 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3D22D49DA347362C7174154A /* Pods_garbageSort.framework */,
+				0CC04561E43BA3F603ADFCA1 /* libPods-garbageSort.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -139,7 +138,6 @@
 				521F17E1241734B80046985E /* Sources */,
 				521F17E2241734B80046985E /* Frameworks */,
 				521F17E3241734B80046985E /* Resources */,
-				BCF79E1E59CDC78916B1DEDC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -219,23 +217,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BCF79E1E59CDC78916B1DEDC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-garbageSort/Pods-garbageSort-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-garbageSort/Pods-garbageSort-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-garbageSort/Pods-garbageSort-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -325,7 +306,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -379,7 +360,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
