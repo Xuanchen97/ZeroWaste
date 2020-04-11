@@ -2,7 +2,7 @@
 //  ARkitViewController.swift
 //  garbageSort
 //
-//  Created by Shiqi Sheng on 2020-03-27.
+//  Created by Xuanchen Liu on 2020-03-27.
 //  Copyright © 2020 Xuanchen Liu. All rights reserved.
 //
 
