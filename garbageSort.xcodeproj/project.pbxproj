@@ -20,6 +20,12 @@
 		5271A9242442395700D1153B /* SiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5271A9232442395700D1153B /* SiteCell.swift */; };
 		588D18AB51968C1EAEFC0536 /* libPods-garbageSort.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC04561E43BA3F603ADFCA1 /* libPods-garbageSort.a */; };
 		AEEA1D1C24422BC10065E8F4 /* project.db in Resources */ = {isa = PBXBuildFile; fileRef = AEEA1D1B24422BC10065E8F4 /* project.db */; };
+		AEEA1D1F24423EEA0065E8F4 /* elephant.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEA1D1D24423EE90065E8F4 /* elephant.png */; };
+		AEEA1D2024423EEA0065E8F4 /* crab.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEA1D1E24423EEA0065E8F4 /* crab.png */; };
+		AEEA1D22244247450065E8F4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEA1D21244247450065E8F4 /* LoginViewController.swift */; };
+		AEEA1D24244247540065E8F4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEA1D23244247540065E8F4 /* RegisterViewController.swift */; };
+		AEEA1D26244248310065E8F4 /* MyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEA1D25244248310065E8F4 /* MyData.swift */; };
+		AEEA1D29244253EE0065E8F4 /* lion.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEA1D28244253EE0065E8F4 /* lion.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +46,12 @@
 		5271A9232442395700D1153B /* SiteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteCell.swift; sourceTree = "<group>"; };
 		9F8275DD34B06AF5B2587CC8 /* Pods-garbageSort.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-garbageSort.release.xcconfig"; path = "Target Support Files/Pods-garbageSort/Pods-garbageSort.release.xcconfig"; sourceTree = "<group>"; };
 		AEEA1D1B24422BC10065E8F4 /* project.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = project.db; sourceTree = "<group>"; };
+		AEEA1D1D24423EE90065E8F4 /* elephant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = elephant.png; sourceTree = "<group>"; };
+		AEEA1D1E24423EEA0065E8F4 /* crab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crab.png; sourceTree = "<group>"; };
+		AEEA1D21244247450065E8F4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AEEA1D23244247540065E8F4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		AEEA1D25244248310065E8F4 /* MyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyData.swift; sourceTree = "<group>"; };
+		AEEA1D28244253EE0065E8F4 /* lion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lion.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,11 +99,9 @@
 				AEEA1D1A24422BA20065E8F4 /* Storyboard */,
 				AEEA1D1924422B960065E8F4 /* Model */,
 				AEEA1D1824422B7B0065E8F4 /* Database */,
-				521F1803242ECB1C0046985E /* Videos */,
+				521F1803242ECB1C0046985E /* Assets */,
 				521F1802242ECA740046985E /* Classes */,
 				521F1800242ECA130046985E /* Controllers */,
-				521F17EA241734B80046985E /* art.scnassets */,
-				521F17F1241734BB0046985E /* Assets.xcassets */,
 				521F17F6241734BB0046985E /* Info.plist */,
 			);
 			path = garbageSort;
@@ -103,6 +113,8 @@
 				521F17FE242ECA040046985E /* ARkitViewController.swift */,
 				521F17EC241734B80046985E /* ViewController.swift */,
 				521F1826242EDE540046985E /* ScanViewController.swift */,
+				AEEA1D21244247450065E8F4 /* LoginViewController.swift */,
+				AEEA1D23244247540065E8F4 /* RegisterViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -111,17 +123,23 @@
 			isa = PBXGroup;
 			children = (
 				521F17E8241734B80046985E /* AppDelegate.swift */,
+				AEEA1D25244248310065E8F4 /* MyData.swift */,
 				5271A9232442395700D1153B /* SiteCell.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		521F1803242ECB1C0046985E /* Videos */ = {
+		521F1803242ECB1C0046985E /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				AEEA1D28244253EE0065E8F4 /* lion.png */,
+				AEEA1D1E24423EEA0065E8F4 /* crab.png */,
+				AEEA1D1D24423EE90065E8F4 /* elephant.png */,
 				521F17FC241735280046985E /* Waste and Recycling.mp4 */,
+				521F17F1241734BB0046985E /* Assets.xcassets */,
+				521F17EA241734B80046985E /* art.scnassets */,
 			);
-			path = Videos;
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		AEEA1D1824422B7B0065E8F4 /* Database */ = {
@@ -218,9 +236,12 @@
 			files = (
 				521F17EB241734B80046985E /* art.scnassets in Resources */,
 				AEEA1D1C24422BC10065E8F4 /* project.db in Resources */,
+				AEEA1D29244253EE0065E8F4 /* lion.png in Resources */,
 				521F1804242ECC400046985E /* Main.storyboard in Resources */,
+				AEEA1D2024423EEA0065E8F4 /* crab.png in Resources */,
 				521F17F5241734BB0046985E /* LaunchScreen.storyboard in Resources */,
 				521F17FD241735280046985E /* Waste and Recycling.mp4 in Resources */,
+				AEEA1D1F24423EEA0065E8F4 /* elephant.png in Resources */,
 				521F17F2241734BB0046985E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,12 +278,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEEA1D22244247450065E8F4 /* LoginViewController.swift in Sources */,
 				521F1829242EDFB10046985E /* GarbageClassifier.mlmodel in Sources */,
+				AEEA1D24244247540065E8F4 /* RegisterViewController.swift in Sources */,
 				521F17FF242ECA040046985E /* ARkitViewController.swift in Sources */,
 				521F17ED241734B80046985E /* ViewController.swift in Sources */,
 				521F17E9241734B80046985E /* AppDelegate.swift in Sources */,
 				5271A9242442395700D1153B /* SiteCell.swift in Sources */,
 				521F1827242EDE540046985E /* ScanViewController.swift in Sources */,
+				AEEA1D26244248310065E8F4 /* MyData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
