@@ -44,6 +44,7 @@ class SiteCell: UITableViewCell {
         contentView.addSubview(primaryLabel)
         contentView.addSubview(secondaryLabel)
         contentView.addSubview(thirdLabel)
+        contentView.addSubview(myImageView)
 
         
     }
