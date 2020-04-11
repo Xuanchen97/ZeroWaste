@@ -17,6 +17,7 @@
 		521F1804242ECC400046985E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521F17EE241734B80046985E /* Main.storyboard */; };
 		521F1827242EDE540046985E /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F1826242EDE540046985E /* ScanViewController.swift */; };
 		521F1829242EDFB10046985E /* GarbageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 521F1828242EDFB00046985E /* GarbageClassifier.mlmodel */; };
+		5271A9242442395700D1153B /* SiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5271A9232442395700D1153B /* SiteCell.swift */; };
 		588D18AB51968C1EAEFC0536 /* libPods-garbageSort.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC04561E43BA3F603ADFCA1 /* libPods-garbageSort.a */; };
 		AEEA1D1F24423EEA0065E8F4 /* elephant.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEA1D1D24423EE90065E8F4 /* elephant.png */; };
 		AEEA1D2024423EEA0065E8F4 /* crab.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEA1D1E24423EEA0065E8F4 /* crab.png */; };
@@ -42,6 +43,8 @@
 		521F17FE242ECA040046985E /* ARkitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARkitViewController.swift; sourceTree = "<group>"; };
 		521F1826242EDE540046985E /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		521F1828242EDFB00046985E /* GarbageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GarbageClassifier.mlmodel; sourceTree = "<group>"; };
+		526B7D7F244262C900D77617 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		5271A9232442395700D1153B /* SiteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteCell.swift; sourceTree = "<group>"; };
 		9F8275DD34B06AF5B2587CC8 /* Pods-garbageSort.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-garbageSort.release.xcconfig"; path = "Target Support Files/Pods-garbageSort/Pods-garbageSort.release.xcconfig"; sourceTree = "<group>"; };
 		AEEA1D1D24423EE90065E8F4 /* elephant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = elephant.png; sourceTree = "<group>"; };
 		AEEA1D1E24423EEA0065E8F4 /* crab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crab.png; sourceTree = "<group>"; };
@@ -113,6 +116,7 @@
 				521F1826242EDE540046985E /* ScanViewController.swift */,
 				AEEA1D21244247450065E8F4 /* LoginViewController.swift */,
 				AEEA1D23244247540065E8F4 /* RegisterViewController.swift */,
+				526B7D7F244262C900D77617 /* TableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -122,6 +126,7 @@
 			children = (
 				521F17E8241734B80046985E /* AppDelegate.swift */,
 				AEEA1D25244248310065E8F4 /* MyData.swift */,
+				5271A9232442395700D1153B /* SiteCell.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -278,9 +283,11 @@
 				AEEA1D22244247450065E8F4 /* LoginViewController.swift in Sources */,
 				521F1829242EDFB10046985E /* GarbageClassifier.mlmodel in Sources */,
 				AEEA1D24244247540065E8F4 /* RegisterViewController.swift in Sources */,
+				526B7D80244262C900D77617 /* TableViewController.swift in Sources */,
 				521F17FF242ECA040046985E /* ARkitViewController.swift in Sources */,
 				521F17ED241734B80046985E /* ViewController.swift in Sources */,
 				521F17E9241734B80046985E /* AppDelegate.swift in Sources */,
+				5271A9242442395700D1153B /* SiteCell.swift in Sources */,
 				521F1827242EDE540046985E /* ScanViewController.swift in Sources */,
 				AEEA1D26244248310065E8F4 /* MyData.swift in Sources */,
 			);
