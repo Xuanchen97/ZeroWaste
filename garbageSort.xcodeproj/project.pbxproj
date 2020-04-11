@@ -24,6 +24,7 @@
 		AEEA1D22244247450065E8F4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEA1D21244247450065E8F4 /* LoginViewController.swift */; };
 		AEEA1D24244247540065E8F4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEA1D23244247540065E8F4 /* RegisterViewController.swift */; };
 		AEEA1D26244248310065E8F4 /* MyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEA1D25244248310065E8F4 /* MyData.swift */; };
+		AEEA1D29244253EE0065E8F4 /* lion.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEA1D28244253EE0065E8F4 /* lion.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		AEEA1D21244247450065E8F4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AEEA1D23244247540065E8F4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		AEEA1D25244248310065E8F4 /* MyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyData.swift; sourceTree = "<group>"; };
+		AEEA1D28244253EE0065E8F4 /* lion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lion.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 		521F1803242ECB1C0046985E /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				AEEA1D28244253EE0065E8F4 /* lion.png */,
 				AEEA1D1E24423EEA0065E8F4 /* crab.png */,
 				AEEA1D1D24423EE90065E8F4 /* elephant.png */,
 				521F17FC241735280046985E /* Waste and Recycling.mp4 */,
@@ -230,6 +233,7 @@
 			files = (
 				521F17EB241734B80046985E /* art.scnassets in Resources */,
 				AEEA1D1C24422BC10065E8F4 /* project.db in Resources */,
+				AEEA1D29244253EE0065E8F4 /* lion.png in Resources */,
 				521F1804242ECC400046985E /* Main.storyboard in Resources */,
 				AEEA1D2024423EEA0065E8F4 /* crab.png in Resources */,
 				521F17F5241734BB0046985E /* LaunchScreen.storyboard in Resources */,
