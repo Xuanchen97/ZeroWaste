@@ -38,47 +38,13 @@ class SiteCell: UITableViewCell {
         thirdLabel.backgroundColor = UIColor.clear
         thirdLabel.textColor = UIColor.black
         
-        fourthLabel.textAlignment = NSTextAlignment.left
-        fourthLabel.font = UIFont.boldSystemFont(ofSize: 16)
-        fourthLabel.backgroundColor = UIColor.clear
-        fourthLabel.textColor = UIColor.black
-        
-        
-        fifthLabel.textAlignment = NSTextAlignment.left
-        fifthLabel.font = UIFont.boldSystemFont(ofSize: 16)
-        fifthLabel.backgroundColor = UIColor.clear
-        fifthLabel.textColor = UIColor.black
-        
-        
-        sixthLabel.textAlignment = NSTextAlignment.left
-        sixthLabel.font = UIFont.boldSystemFont(ofSize: 16)
-        sixthLabel.backgroundColor = UIColor.clear
-        sixthLabel.textColor = UIColor.black
-        
-        
-        seventhLabel.textAlignment = NSTextAlignment.left
-        seventhLabel.font = UIFont.boldSystemFont(ofSize: 16)
-        seventhLabel.backgroundColor = UIColor.clear
-        seventhLabel.textColor = UIColor.black
-        
-        eighthLabel.textAlignment = NSTextAlignment.left
-        eighthLabel.font = UIFont.boldSystemFont(ofSize: 16)
-        eighthLabel.backgroundColor = UIColor.clear
-        eighthLabel.textColor = UIColor.black
-        
-        
-        // step 11e - no configuring of myImageView needed, instead add all 3 items manually as below
+
+    
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(primaryLabel)
         contentView.addSubview(secondaryLabel)
         contentView.addSubview(thirdLabel)
-        contentView.addSubview(fourthLabel)
-        contentView.addSubview(fifthLabel)
-        contentView.addSubview(sixthLabel)
-        contentView.addSubview(seventhLabel)
-        contentView.addSubview(eighthLabel)
-        contentView.addSubview(myImageView)
-        
+
         
     }
     

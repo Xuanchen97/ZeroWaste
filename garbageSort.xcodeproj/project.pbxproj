@@ -43,6 +43,7 @@
 		521F17FE242ECA040046985E /* ARkitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARkitViewController.swift; sourceTree = "<group>"; };
 		521F1826242EDE540046985E /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		521F1828242EDFB00046985E /* GarbageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GarbageClassifier.mlmodel; sourceTree = "<group>"; };
+		526B7D7F244262C900D77617 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		5271A9232442395700D1153B /* SiteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteCell.swift; sourceTree = "<group>"; };
 		9F8275DD34B06AF5B2587CC8 /* Pods-garbageSort.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-garbageSort.release.xcconfig"; path = "Target Support Files/Pods-garbageSort/Pods-garbageSort.release.xcconfig"; sourceTree = "<group>"; };
 		AEEA1D1B24422BC10065E8F4 /* project.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = project.db; sourceTree = "<group>"; };
@@ -115,6 +116,7 @@
 				521F1826242EDE540046985E /* ScanViewController.swift */,
 				AEEA1D21244247450065E8F4 /* LoginViewController.swift */,
 				AEEA1D23244247540065E8F4 /* RegisterViewController.swift */,
+				526B7D7F244262C900D77617 /* TableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -281,6 +283,7 @@
 				AEEA1D22244247450065E8F4 /* LoginViewController.swift in Sources */,
 				521F1829242EDFB10046985E /* GarbageClassifier.mlmodel in Sources */,
 				AEEA1D24244247540065E8F4 /* RegisterViewController.swift in Sources */,
+				526B7D80244262C900D77617 /* TableViewController.swift in Sources */,
 				521F17FF242ECA040046985E /* ARkitViewController.swift in Sources */,
 				521F17ED241734B80046985E /* ViewController.swift in Sources */,
 				521F17E9241734B80046985E /* AppDelegate.swift in Sources */,
