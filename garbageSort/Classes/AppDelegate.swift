@@ -13,7 +13,7 @@ import SQLite3
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var databaseName : String? = "project.db"
+    var databaseName : String? = "finalProject.db"
     var databasePath : String?
     var people : [MyData] = []
 

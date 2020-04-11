@@ -26,6 +26,7 @@ class RegisterViewController: UIViewController, UIPickerViewDelegate, UITextFiel
     
     var cAvatar : String?
     var flyLayer : CALayer?
+    var nameFlag:Bool = false
     
     let mainDelegate = UIApplication.shared.delegate as! AppDelegate
     
@@ -119,27 +120,47 @@ class RegisterViewController: UIViewController, UIPickerViewDelegate, UITextFiel
     
     @IBAction func insert (sender : UIButton) {
         let mainDelegate = UIApplication.shared.delegate as! AppDelegate
+        mainDelegate.readDataFromDB()
+        nameFlag = false
+        
+        for i in mainDelegate.people{
+            if (tfName.text == i.name){
+                nameFlag = true
+            }
+        }
+        
+        
         if(cAvatar != nil && tfEmail.text != "" && tfName.text != "" && tfPwd.text != "")
         {
-            let data : MyData = MyData.init()
-            data.initWithData(theRow: 0, theAvatar: cAvatar!, theName: tfName.text!, thePwd: tfPwd.text!, theEmail: tfEmail.text!)
-            let returnCode = mainDelegate.insertIntoDB(person: data)
-            var returnMsg : String = "Person Add"
             
-            if(returnCode == false)
-            {
-                returnMsg = "Person Add Faild"
+            if (nameFlag){
+                let alert = UIAlertController(title: "Duplicate User Name", message: "This user name has been taken, Please try another one!", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default){
+                    (alertAction) in
+                }
+                alert.addAction(okAction)
+                present(alert, animated: true)
             }
+            else{
+                let data : MyData = MyData.init()
+                data.initWithData(theRow: 0, theAvatar: cAvatar!, theName: tfName.text!, thePwd: tfPwd.text!, theEmail: tfEmail.text!)
+                let returnCode = mainDelegate.insertIntoDB(person: data)
+                var returnMsg : String = "Person Add"
             
-            let alertbox = UIAlertController(title: returnMsg, message: "Name: " + data.name + " Email: " + String(data.email), preferredStyle: .alert)
+                if(returnCode == false)
+                {
+                    returnMsg = "Person Add Faild"
+                }
             
-            let okAction = UIAlertAction(title: "OK", style: .default) {
-                (alert) in
-                self.dismiss(animated: true, completion: nil)
+                let alertbox = UIAlertController(title: returnMsg, message: "Name: " + data.name + " Email: " + String(data.email), preferredStyle: .alert)
+            
+                let okAction = UIAlertAction(title: "OK", style: .default) {
+                    (alert) in
+                    self.dismiss(animated: true, completion: nil)
+                }
+                alertbox.addAction(okAction)
+                present(alertbox, animated: true)
             }
-            
-            alertbox.addAction(okAction)
-            present(alertbox, animated: true)
         }else{
             let alert = UIAlertController(title: "Empty", message: "Missing required fields!", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .default){
@@ -154,6 +175,9 @@ class RegisterViewController: UIViewController, UIPickerViewDelegate, UITextFiel
         super.viewDidLoad()
 
         mainDelegate.readDataFromDB()
+        
+        
+        
         
         let defaults = UserDefaults.standard
         
