@@ -82,8 +82,6 @@
 		521F17E7241734B80046985E /* garbageSort */ = {
 			isa = PBXGroup;
 			children = (
-				521F17F3241734BB0046985E /* LaunchScreen.storyboard */,
-				521F17EE241734B80046985E /* Main.storyboard */,
 				AEEA1D1A24422BA20065E8F4 /* Storyboard */,
 				AEEA1D1924422B960065E8F4 /* Model */,
 				AEEA1D1824422B7B0065E8F4 /* Database */,
@@ -142,6 +140,8 @@
 		AEEA1D1A24422BA20065E8F4 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				521F17EE241734B80046985E /* Main.storyboard */,
+				521F17F3241734BB0046985E /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
