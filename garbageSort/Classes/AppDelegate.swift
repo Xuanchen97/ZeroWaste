@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  garbageSort
 //
-//  Created by Shiqi Sheng on 2020-03-09.
+//  Created by Xuanchen Liu on 2020-03-09.
 //  Copyright © 2020 Xuanchen Liu. All rights reserved.
 //
 
