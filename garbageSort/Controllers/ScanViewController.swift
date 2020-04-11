@@ -1,4 +1,10 @@
-
+//
+//  ScanViewController.swift
+//  garbageSort
+//
+//  Created Xuanchen Liu on 2020-03-09.
+//  Copyright © 2020 Xuanchen Liu. All rights reserved.
+//
 
 import UIKit
 import CoreML
@@ -27,12 +33,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//        let userPickedImage = info[.editedImage]
-//        if(UIImagePickerController.isSourceTypeAvailable(.camera)){
-//            imageView.image = userPickedImage as? UIImage
-//        }
-//
-//        imagePicker.dismiss(animated: true, completion: nil)
+
         if let userPickedImage = info[.originalImage] as? UIImage {
                    
                    guard let ciImage = CIImage(image: userPickedImage) else {
@@ -41,7 +42,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                    
                    pickedImage = userPickedImage
 
-                   detect(flowerImage: ciImage)
+                   detect(garbageImage: ciImage)
 
                     imageView.image = userPickedImage
             
@@ -51,7 +52,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                imagePicker.dismiss(animated: true, completion: nil)
     }
     
-    func detect(flowerImage: CIImage) {
+    func detect(garbageImage: CIImage) {
         
         guard let model = try? VNCoreMLModel(for: GarbageClassifier().model) else {
             fatalError("Can't load model")
@@ -62,9 +63,9 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 fatalError("Could not complete classfication")
             }
             self.Ntitle?.title = result.identifier.capitalized
-            self.requestInfo(flowerName: result.identifier)
+            self.requestInfo(garbageName: result.identifier)
         }
-        let handler = VNImageRequestHandler(ciImage: flowerImage)
+        let handler = VNImageRequestHandler(ciImage: garbageImage)
         do {
             try handler.perform([request])
         }
@@ -73,26 +74,26 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         }
     }
     
-    func requestInfo(flowerName: String) {
-        let parameters : [String:String] = ["format" : "json", "action" : "query", "prop" : "extracts|pageimages", "exintro" : "", "explaintext" : "", "titles" : flowerName, "redirects" : "1", "pithumbsize" : "500", "indexpageids" : ""]
+    func requestInfo(garbageName: String) {
+        let parameters : [String:String] = ["format" : "json", "action" : "query", "prop" : "extracts|pageimages", "exintro" : "", "explaintext" : "", "titles" : garbageName, "redirects" : "1", "pithumbsize" : "500", "indexpageids" : ""]
         
         
         Alamofire.request(wikipediaURl, method: .get, parameters: parameters).responseJSON { (response) in
             if response.result.isSuccess {
 
-                let flowerJSON : JSON = JSON(response.result.value!)
+                let garbageJSON : JSON = JSON(response.result.value!)
                 
-                let pageid = flowerJSON["query"]["pageids"][0].stringValue
+                let pageid = garbageJSON["query"]["pageids"][0].stringValue
                 
-                let flowerDescription = flowerJSON["query"]["pages"][pageid]["extract"].stringValue
-                let flowerImageURL = flowerJSON["query"]["pages"][pageid]["thumbnail"]["source"].stringValue
+                let garbageDescription = garbageJSON["query"]["pages"][pageid]["extract"].stringValue
+                let garbageImageURL = garbageJSON["query"]["pages"][pageid]["thumbnail"]["source"].stringValue
             
-                self.label.text = flowerDescription
+                self.label.text = garbageDescription
                 
                 
                 
                 
-                self.imageView.sd_setImage(with: URL(string: flowerImageURL), completed: { (image, error,  cache, url) in
+                self.imageView.sd_setImage(with: URL(string: garbageImageURL), completed: { (image, error,  cache, url) in
                     
                     if let currentImage = self.imageView.image {
                         
