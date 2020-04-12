@@ -12,12 +12,6 @@ class SiteCell: UITableViewCell {
     // step 11 - define 2 labels and an image view for our custom cell
     let primaryLabel = UILabel()
     let secondaryLabel = UILabel()
-    let thirdLabel = UILabel()
-    let fourthLabel = UILabel()
-    let fifthLabel = UILabel()
-    let sixthLabel = UILabel()
-    let seventhLabel = UILabel()
-    let eighthLabel = UILabel()
     let myImageView = UIImageView()
     
     // step 11b - override the following constructor
@@ -33,17 +27,12 @@ class SiteCell: UITableViewCell {
         secondaryLabel.backgroundColor = UIColor.clear
         secondaryLabel.textColor = UIColor.blue
    
-        thirdLabel.textAlignment = NSTextAlignment.left
-        thirdLabel.font = UIFont.boldSystemFont(ofSize: 16)
-        thirdLabel.backgroundColor = UIColor.clear
-        thirdLabel.textColor = UIColor.black
-        
+
 
     
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(primaryLabel)
         contentView.addSubview(secondaryLabel)
-        contentView.addSubview(thirdLabel)
         contentView.addSubview(myImageView)
 
         
@@ -70,23 +59,6 @@ class SiteCell: UITableViewCell {
         f = CGRect(x: 100, y: 40, width: 460, height: 20)
         secondaryLabel.frame = f
         
-        f = CGRect(x: 100, y: 65, width: 460, height: 20)
-        thirdLabel.frame = f
-        
-        f = CGRect(x: 100, y: 90, width: 460, height: 20)
-        fourthLabel.frame = f
-        
-        f = CGRect(x: 100, y: 115, width: 460, height: 20)
-       fifthLabel.frame = f
-        
-        f = CGRect(x: 100, y: 140, width: 460, height: 20)
-        sixthLabel.frame = f
-        
-        f = CGRect(x: 100, y: 165, width: 460, height: 20)
-        seventhLabel.frame = f
-        
-        f = CGRect(x: 100, y: 190, width: 460, height: 20)
-        eighthLabel.frame = f
         
         f = CGRect(x: 5, y: 5, width: 45, height: 45)
         myImageView.frame = f
