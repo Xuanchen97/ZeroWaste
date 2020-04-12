@@ -3,7 +3,7 @@
 //  garbageSort
 //
 //  Created by Xuanchen Liu on 2020-03-09.
-//  Copyright © 2020 Xuanchen Liu. All rights reserved.
+//  Copyright © 2020 Haoyue Wang. All rights reserved.
 //
 
 import UIKit
@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var databaseName : String? = "finalProject.db"
     var databasePath : String?
     var people : [MyData] = []
+    var loginFlag : Bool = false
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
