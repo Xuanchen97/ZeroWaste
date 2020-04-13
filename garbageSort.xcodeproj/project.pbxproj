@@ -19,6 +19,7 @@
 		521F1829242EDFB10046985E /* GarbageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 521F1828242EDFB00046985E /* GarbageClassifier.mlmodel */; };
 		524A46A324428C3900D95556 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526B7D7F244262C900D77617 /* TableViewController.swift */; };
 		5271A9242442395700D1153B /* SiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5271A9232442395700D1153B /* SiteCell.swift */; };
+		529305052444D64300D5755E /* MapKitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529305042444D64300D5755E /* MapKitController.swift */; };
 		588D18AB51968C1EAEFC0536 /* libPods-garbageSort.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC04561E43BA3F603ADFCA1 /* libPods-garbageSort.a */; };
 		AEEA1D1F24423EEA0065E8F4 /* elephant.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEA1D1D24423EE90065E8F4 /* elephant.png */; };
 		AEEA1D2024423EEA0065E8F4 /* crab.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEA1D1E24423EEA0065E8F4 /* crab.png */; };
@@ -46,6 +47,7 @@
 		521F1828242EDFB00046985E /* GarbageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GarbageClassifier.mlmodel; sourceTree = "<group>"; };
 		526B7D7F244262C900D77617 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		5271A9232442395700D1153B /* SiteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteCell.swift; sourceTree = "<group>"; };
+		529305042444D64300D5755E /* MapKitController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapKitController.swift; sourceTree = "<group>"; };
 		9F8275DD34B06AF5B2587CC8 /* Pods-garbageSort.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-garbageSort.release.xcconfig"; path = "Target Support Files/Pods-garbageSort/Pods-garbageSort.release.xcconfig"; sourceTree = "<group>"; };
 		AEEA1D1D24423EE90065E8F4 /* elephant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = elephant.png; sourceTree = "<group>"; };
 		AEEA1D1E24423EEA0065E8F4 /* crab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crab.png; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 		521F1800242ECA130046985E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				529305042444D64300D5755E /* MapKitController.swift */,
 				521F17FE242ECA040046985E /* ARkitViewController.swift */,
 				521F17EC241734B80046985E /* ViewController.swift */,
 				521F1826242EDE540046985E /* ScanViewController.swift */,
@@ -288,6 +291,7 @@
 				521F17FF242ECA040046985E /* ARkitViewController.swift in Sources */,
 				521F17ED241734B80046985E /* ViewController.swift in Sources */,
 				521F17E9241734B80046985E /* AppDelegate.swift in Sources */,
+				529305052444D64300D5755E /* MapKitController.swift in Sources */,
 				5271A9242442395700D1153B /* SiteCell.swift in Sources */,
 				521F1827242EDE540046985E /* ScanViewController.swift in Sources */,
 				AEEA1D26244248310065E8F4 /* MyData.swift in Sources */,
