@@ -3,7 +3,7 @@
 //  garbageSort
 //
 //  Created by Xcode User on 2020-04-11.
-//  Copyright © 2020 Xuanchen Liu. All rights reserved.
+//  Copyright © 2020 Haoyue Wang. All rights reserved.
 //
 
 import UIKit
@@ -175,9 +175,6 @@ class RegisterViewController: UIViewController, UIPickerViewDelegate, UITextFiel
         super.viewDidLoad()
 
         mainDelegate.readDataFromDB()
-        
-        
-        
         
         let defaults = UserDefaults.standard
         

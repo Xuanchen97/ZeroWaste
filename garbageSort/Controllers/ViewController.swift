@@ -11,14 +11,38 @@ import SceneKit
 import ARKit
 
 class ViewController: UIViewController, ARSCNViewDelegate {
-
+    
+    @IBOutlet var AR : UIButton!
+    @IBOutlet var AI : UIButton!
+    
+    let mainDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     @IBAction func unwindToHomeVC(sender : UIStoryboardSegue){
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        if(mainDelegate.loginFlag){
+            AR.isEnabled = true
+            AR.alpha = 1
+            AI.isEnabled = true
+            AI.alpha = 1
+        }
+        else{
+            AR.isEnabled = false
+            AR.alpha = 0.5
+            AI.isEnabled = false
+            AI.alpha = 0.5
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        
+        
     }
     
 
