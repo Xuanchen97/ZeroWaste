@@ -27,6 +27,7 @@
 		AEEA1D26244248310065E8F4 /* MyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEA1D25244248310065E8F4 /* MyData.swift */; };
 		AEEA1D29244253EE0065E8F4 /* lion.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEA1D28244253EE0065E8F4 /* lion.png */; };
 		AEEA1D31244281190065E8F4 /* finalProject.db in Resources */ = {isa = PBXBuildFile; fileRef = AEEA1D30244281190065E8F4 /* finalProject.db */; };
+		AEF91AA02447627800D43A17 /* animal2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AEF91A9F2447627800D43A17 /* animal2.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		AEEA1D25244248310065E8F4 /* MyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyData.swift; sourceTree = "<group>"; };
 		AEEA1D28244253EE0065E8F4 /* lion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lion.png; sourceTree = "<group>"; };
 		AEEA1D30244281190065E8F4 /* finalProject.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = finalProject.db; sourceTree = "<group>"; };
+		AEF91A9F2447627800D43A17 /* animal2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = animal2.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 		521F1803242ECB1C0046985E /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				AEF91A9F2447627800D43A17 /* animal2.jpg */,
 				AEEA1D28244253EE0065E8F4 /* lion.png */,
 				AEEA1D1E24423EEA0065E8F4 /* crab.png */,
 				AEEA1D1D24423EE90065E8F4 /* elephant.png */,
@@ -237,6 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEF91AA02447627800D43A17 /* animal2.jpg in Resources */,
 				521F17EB241734B80046985E /* art.scnassets in Resources */,
 				AEEA1D29244253EE0065E8F4 /* lion.png in Resources */,
 				521F1804242ECC400046985E /* Main.storyboard in Resources */,
