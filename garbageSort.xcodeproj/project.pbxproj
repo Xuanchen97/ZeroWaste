@@ -21,6 +21,7 @@
 		5271A9242442395700D1153B /* SiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5271A9232442395700D1153B /* SiteCell.swift */; };
 		529305052444D64300D5755E /* MapKitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529305042444D64300D5755E /* MapKitController.swift */; };
 		529305072447614900D5755E /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529305062447614900D5755E /* AboutViewController.swift */; };
+		52930509244763A700D5755E /* ZeroWastePic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52930508244763A700D5755E /* ZeroWastePic.jpg */; };
 		588D18AB51968C1EAEFC0536 /* libPods-garbageSort.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC04561E43BA3F603ADFCA1 /* libPods-garbageSort.a */; };
 		AEEA1D1F24423EEA0065E8F4 /* elephant.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEA1D1D24423EE90065E8F4 /* elephant.png */; };
 		AEEA1D2024423EEA0065E8F4 /* crab.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEA1D1E24423EEA0065E8F4 /* crab.png */; };
@@ -50,6 +51,7 @@
 		5271A9232442395700D1153B /* SiteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteCell.swift; sourceTree = "<group>"; };
 		529305042444D64300D5755E /* MapKitController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapKitController.swift; sourceTree = "<group>"; };
 		529305062447614900D5755E /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		52930508244763A700D5755E /* ZeroWastePic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ZeroWastePic.jpg; sourceTree = "<group>"; };
 		9F8275DD34B06AF5B2587CC8 /* Pods-garbageSort.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-garbageSort.release.xcconfig"; path = "Target Support Files/Pods-garbageSort/Pods-garbageSort.release.xcconfig"; sourceTree = "<group>"; };
 		AEEA1D1D24423EE90065E8F4 /* elephant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = elephant.png; sourceTree = "<group>"; };
 		AEEA1D1E24423EEA0065E8F4 /* crab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crab.png; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 		521F1803242ECB1C0046985E /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				52930508244763A700D5755E /* ZeroWastePic.jpg */,
 				AEEA1D28244253EE0065E8F4 /* lion.png */,
 				AEEA1D1E24423EEA0065E8F4 /* crab.png */,
 				AEEA1D1D24423EE90065E8F4 /* elephant.png */,
@@ -244,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				521F17EB241734B80046985E /* art.scnassets in Resources */,
+				52930509244763A700D5755E /* ZeroWastePic.jpg in Resources */,
 				AEEA1D29244253EE0065E8F4 /* lion.png in Resources */,
 				521F1804242ECC400046985E /* Main.storyboard in Resources */,
 				AEEA1D2024423EEA0065E8F4 /* crab.png in Resources */,
