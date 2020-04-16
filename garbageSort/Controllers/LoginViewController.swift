@@ -5,6 +5,10 @@
 //  Created by Xcode User on 2020-04-11.
 //  Copyright © 2020 Haoyue Wang. All rights reserved.
 //
+//  Description: This controller is about login. Get user name and password from SQLite
+//               if it is zoe jason or saam they are the admin. After they login they will
+//               redirect to table page
+//  Author: Haoyue Wang
 
 import UIKit
 

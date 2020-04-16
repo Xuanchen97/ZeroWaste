@@ -1,7 +1,7 @@
 //
 //  ARkitViewController.swift
 //  garbageSort
-//
+
 //  Created by Xuanchen Liu on 2020-03-27.
 //  Copyright © 2020 Xuanchen Liu. All rights reserved.
 //
@@ -50,13 +50,13 @@ class ARkitViewController:UIViewController, ARSCNViewDelegate {
           
 
       }
-
+    // function to play the AR video
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
         
         let node = SCNNode()
         
         if let imageAnchor = anchor as? ARImageAnchor {
-            
+            // Define the video path
             let videoNode = SKVideoNode(fileNamed: "Waste and Recycling.mp4")
             
             videoNode.play()

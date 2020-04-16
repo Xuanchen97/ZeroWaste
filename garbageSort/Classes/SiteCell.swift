@@ -9,12 +9,12 @@ import UIKit
 
 class SiteCell: UITableViewCell {
     
-    // step 11 - define 2 labels and an image view for our custom cell
+    // define 2 labels and an image view for our custom cell
     let primaryLabel = UILabel()
     let secondaryLabel = UILabel()
     let myImageView = UIImageView()
     
-    // step 11b - override the following constructor
+    // override the following constructor
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         
         primaryLabel.textAlignment = NSTextAlignment.left

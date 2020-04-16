@@ -1,10 +1,11 @@
-//
 //  MyData.swift
 //  garbageSort
 //
 //  Created by Xcode User on 2020-04-11.
-//  Copyright © 2020 Xuanchen Liu. All rights reserved.
+//  Copyright © 2020 Haoyue Wang. All rights reserved.
 //
+//  Desciption: This app is for storing the user information
+//  Author: Haoyue Wang
 
 import UIKit
 

@@ -1,10 +1,11 @@
-//
 //  AppDelegate.swift
 //  garbageSort
 //
-//  Created by Xuanchen Liu on 2020-03-09.
+//  Created by Haoyue Wang on 2020-03-09.
 //  Copyright © 2020 Haoyue Wang. All rights reserved.
 //
+//  Desciption: This class use for SQLite DB - Create, Insert
+//  Author: Haoyue Wang
 
 import UIKit
 import SQLite3

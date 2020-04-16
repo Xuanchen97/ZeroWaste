@@ -5,6 +5,9 @@
 //  Created by Xcode User on 2020-04-11.
 //  Copyright © 2020 Haoyue Wang. All rights reserved.
 //
+//  Description: This controller is for user register. then if every field is not empty
+//               it will saved to db
+//  Author: Haoyue Wang
 
 import UIKit
 

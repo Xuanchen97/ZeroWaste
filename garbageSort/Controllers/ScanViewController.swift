@@ -3,8 +3,11 @@
 //  garbageSort
 //
 //  Created Xuanchen Liu on 2020-03-09.
-//  Copyright © 2020 Xuanchen Liu. All rights reserved.
+//  Copyright © 2020 Haoyue Wang. All rights reserved.
 //
+//  Description: This controller is for the scan the garbage. Implement the well-trained model. Machine learning and Artificial Intellgence
+//
+//  Author: Haoyue Wang
 
 import UIKit
 import CoreML
