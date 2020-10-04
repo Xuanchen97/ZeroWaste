@@ -23,33 +23,25 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        
-        if(mainDelegate.loginFlag){
-            AR.isEnabled = true
-            AR.alpha = 1
-            AI.isEnabled = true
-            AI.alpha = 1
-        }
-        else{
-            AR.isEnabled = false
-            AR.alpha = 0.5
-            AI.isEnabled = false
-            AI.alpha = 0.5
-        }
-    }
-    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(true)
+//        
+//        if(mainDelegate.loginFlag){
+//            AR.isEnabled = true
+//            AR.alpha = 1
+//            AI.isEnabled = true
+//            AI.alpha = 1
+//        }
+//        else{
+//            AR.isEnabled = false
+//            AR.alpha = 0.5
+//            AI.isEnabled = false
+//            AI.alpha = 0.5
+//        }
+//    }
+//    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let soundURL = Bundle.main.path(forResource: "bgm", ofType: "mp3")
-        let url = URL(fileURLWithPath: soundURL!)
-        soundPlayer = try! AVAudioPlayer.init(contentsOf: url)
-        soundPlayer?.currentTime = 0
-        soundPlayer?.volume = 0.5
-        soundPlayer?.numberOfLoops = -1
-        soundPlayer?.play()
         
     }
     
