@@ -34,9 +34,10 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         imagePicker.sourceType = .camera
         imagePicker.allowsEditing = true
     }
-    
+    // image Picker dekegate method
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
 
+        //Convert user picked image to CI image
         if let userPickedImage = info[.originalImage] as? UIImage {
                    
                    guard let ciImage = CIImage(image: userPickedImage) else {
@@ -60,11 +61,12 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         guard let model = try? VNCoreMLModel(for: GarbageClassifier().model) else {
             fatalError("Can't load model")
         }
-        
+        //Process to look for the image was classified as
         let request = VNCoreMLRequest(model: model) { (request, error) in
             guard let result = request.results?.first as? VNClassificationObservation else {
                 fatalError("Could not complete classfication")
             }
+            //the string describes what the classification is
             self.Ntitle?.title = result.identifier.capitalized
             self.requestInfo(garbageName: result.identifier)
         }
@@ -92,9 +94,6 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 let garbageImageURL = garbageJSON["query"]["pages"][pageid]["thumbnail"]["source"].stringValue
             
                 self.label.text = garbageDescription
-                
-                
-                
                 
                 self.imageView.sd_setImage(with: URL(string: garbageImageURL), completed: { (image, error,  cache, url) in
                     
