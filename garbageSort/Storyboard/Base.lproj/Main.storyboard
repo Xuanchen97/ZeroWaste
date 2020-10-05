@@ -366,7 +366,7 @@
                                 <rect key="frame" x="66" y="429" width="243" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LyE-20-WDs">
@@ -390,6 +390,10 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ZeroW.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="2SJ-mK-QcT">
+                                <rect key="frame" x="33" y="75" width="309" height="151"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -400,7 +404,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137" y="99"/>
+            <point key="canvasLocation" x="136.80000000000001" y="98.50074962518741"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="q4N-vN-BEo">
@@ -630,6 +634,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ZeroW.jpeg" width="526" height="178"/>
         <image name="animal2.jpg" width="1920" height="1080"/>
         <image name="camera.png" width="375" height="375"/>
         <image name="crab.png" width="576" height="576"/>
