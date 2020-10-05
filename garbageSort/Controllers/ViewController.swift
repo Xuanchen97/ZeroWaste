@@ -19,6 +19,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     let mainDelegate = UIApplication.shared.delegate as! AppDelegate
     
+    @IBAction func toMunicipalities(){
+        self.performSegue(withIdentifier: "toMunicipalities", sender: nil)
+    }
+    
     @IBAction func unwindToHomeVC(sender : UIStoryboardSegue){
         
     }

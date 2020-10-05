@@ -16,6 +16,9 @@ class MunicipalitiesViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func unwindToMunicipliesVC(sender : UIStoryboardSegue){
+        
+    }
 
     /*
     // MARK: - Navigation
