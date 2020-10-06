@@ -55,19 +55,44 @@ class MapKitController: UIViewController, CLLocationManagerDelegate {
     
     //function for adding annotated locations on map
     private func addAnnotations(){
+        
+        // Peel Region
         let HeartlakeAnnotation = MKPointAnnotation()
         HeartlakeAnnotation.title = "Heart Lake Community Recycling Centre"
         HeartlakeAnnotation.coordinate = CLLocationCoordinate2D(latitude: 43.710606, longitude: -79.801796)
+        
+        let BattlefordAnnotation = MKPointAnnotation()
+        BattlefordAnnotation.title = "Battleford Community Recycling Centre"
+        BattlefordAnnotation.coordinate = CLLocationCoordinate2D(latitude: 43.583734, longitude: 79.739060)
+        
+        let PeelScrapAnnotation = MKPointAnnotation()
+        PeelScrapAnnotation.title = "Peel Scrap Metal Recycling Centre"
+        PeelScrapAnnotation.coordinate = CLLocationCoordinate2D(latitude: 43.693585, longitude: 79.662407)
         
         let simsRecycleAnnotation = MKPointAnnotation()
         simsRecycleAnnotation.title = "Sims Recycling Solutions"
         simsRecycleAnnotation.coordinate = CLLocationCoordinate2D(latitude: 43.688228, longitude: -79.705006)
         
+        // Halton Region
+        let HaltonWasteAnnotation = MKPointAnnotation()
+        HaltonWasteAnnotation.title = "Halton Waste Management Site"
+        HaltonWasteAnnotation.coordinate = CLLocationCoordinate2D(latitude: 43.476987, longitude: -79.823558)
+        
+        
+        
         desinations.append(HeartlakeAnnotation)
         desinations.append(simsRecycleAnnotation)
+        desinations.append(BattlefordAnnotation)
+        desinations.append(PeelScrapAnnotation)
+        desinations.append(HaltonWasteAnnotation)
+
         
         mapview.addAnnotation(HeartlakeAnnotation)
         mapview.addAnnotation(simsRecycleAnnotation)
+        mapview.addAnnotation(BattlefordAnnotation)
+        mapview.addAnnotation(PeelScrapAnnotation)
+        mapview.addAnnotation(HaltonWasteAnnotation)
+
     }
     
     //function to create route between location and annotated location

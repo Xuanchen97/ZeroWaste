@@ -93,7 +93,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 let garbageDescription = garbageJSON["query"]["pages"][pageid]["extract"].stringValue
                 let garbageImageURL = garbageJSON["query"]["pages"][pageid]["thumbnail"]["source"].stringValue
             
-                self.label.text = garbageDescription
+//                self.label.text = garbageDescription
                 
                 self.imageView.sd_setImage(with: URL(string: garbageImageURL), completed: { (image, error,  cache, url) in
                     
