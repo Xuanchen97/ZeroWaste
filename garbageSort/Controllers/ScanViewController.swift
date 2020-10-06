@@ -96,22 +96,22 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 //                self.label.text = garbageDescription
                 
                 self.imageView.sd_setImage(with: URL(string: garbageImageURL), completed: { (image, error,  cache, url) in
-                    
-                    if let currentImage = self.imageView.image {
-                        
-//                        guard let dominantColor = ColorThief.getColor(from: currentImage) else {
-//                            fatalError("Can't get dominant color")
-//                        }
+                    self.imageView.image = self.pickedImage
+//                    if let currentImage = self.imageView.image {
 //
-                        
-                        DispatchQueue.main.async {
-                            self.navigationController?.navigationBar.isTranslucent = true
-                            
-                        }
-                    } else {
-                        self.imageView.image = self.pickedImage
-                        self.label.text = "Could not get information from Wikipedia."
-                    }
+////                        guard let dominantColor = ColorThief.getColor(from: currentImage) else {
+////                            fatalError("Can't get dominant color")
+////                        }
+////
+//
+//                        DispatchQueue.main.async {
+//                            self.navigationController?.navigationBar.isTranslucent = true
+//
+//                        }
+//                    } else {
+//                        self.imageView.image = self.pickedImage
+//                        //self.label.text = "Could not get information from Wikipedia."
+//                    }
                 })
                 
             }
