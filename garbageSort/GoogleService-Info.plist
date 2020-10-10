@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>728075863589-oq4091u5111ui467pv45l6fei0crrqn4.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.728075863589-oq4091u5111ui467pv45l6fei0crrqn4</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC8dtZ7qgZBPAmtsZnNA6OjfhjRJbF8W7U</string>
+	<key>GCM_SENDER_ID</key>
+	<string>728075863589</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.xuanchen.garbageSort</string>
+	<key>PROJECT_ID</key>
+	<string>zerowaste-67491</string>
+	<key>STORAGE_BUCKET</key>
+	<string>zerowaste-67491.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:728075863589:ios:7e914eab32f757ca6e21cc</string>
+	<key>DATABASE_URL</key>
+	<string>https://zerowaste-67491.firebaseio.com</string>
+</dict>
+</plist>

@@ -1,4 +1,4 @@
-module Pods_garbageSort {
+framework module Pods_garbageSort {
   umbrella header "Pods-garbageSort-umbrella.h"
 
   export *

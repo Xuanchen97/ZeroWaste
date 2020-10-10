@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16BE322C1BC1AA632C989B87 /* Pods_garbageSort.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B5E5A211444E76D6A60C508 /* Pods_garbageSort.framework */; };
 		320FC648252BAD15008373A8 /* AnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320FC647252BAD15008373A8 /* AnalysisViewController.swift */; };
 		320FC64B252BB85F008373A8 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 320FC64A252BB85F008373A8 /* camera.png */; };
 		320FC64E252BBFA1008373A8 /* MunicipalitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320FC64D252BBFA1008373A8 /* MunicipalitiesViewController.swift */; };
@@ -22,11 +23,11 @@
 		521F1827242EDE540046985E /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F1826242EDE540046985E /* ScanViewController.swift */; };
 		521F1829242EDFB10046985E /* GarbageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 521F1828242EDFB00046985E /* GarbageClassifier.mlmodel */; };
 		524A46A324428C3900D95556 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526B7D7F244262C900D77617 /* TableViewController.swift */; };
+		525DBCEC25323E4600A26E87 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 525DBCEB25323E4600A26E87 /* GoogleService-Info.plist */; };
 		5271A9242442395700D1153B /* SiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5271A9232442395700D1153B /* SiteCell.swift */; };
 		529305052444D64300D5755E /* MapKitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529305042444D64300D5755E /* MapKitController.swift */; };
 		529305072447614900D5755E /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529305062447614900D5755E /* AboutViewController.swift */; };
 		52930509244763A700D5755E /* ZeroWastePic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52930508244763A700D5755E /* ZeroWastePic.jpg */; };
-		588D18AB51968C1EAEFC0536 /* libPods-garbageSort.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC04561E43BA3F603ADFCA1 /* libPods-garbageSort.a */; };
 		AEEA1D1F24423EEA0065E8F4 /* elephant.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEA1D1D24423EE90065E8F4 /* elephant.png */; };
 		AEEA1D2024423EEA0065E8F4 /* crab.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEA1D1E24423EEA0065E8F4 /* crab.png */; };
 		AEEA1D22244247450065E8F4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEA1D21244247450065E8F4 /* LoginViewController.swift */; };
@@ -40,7 +41,6 @@
 
 /* Begin PBXFileReference section */
 		07194E137E83043B004E300D /* Pods-garbageSort.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-garbageSort.debug.xcconfig"; path = "Target Support Files/Pods-garbageSort/Pods-garbageSort.debug.xcconfig"; sourceTree = "<group>"; };
-		0CC04561E43BA3F603ADFCA1 /* libPods-garbageSort.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-garbageSort.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		320FC647252BAD15008373A8 /* AnalysisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisViewController.swift; sourceTree = "<group>"; };
 		320FC64A252BB85F008373A8 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
 		320FC64D252BBFA1008373A8 /* MunicipalitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MunicipalitiesViewController.swift; sourceTree = "<group>"; };
@@ -57,11 +57,13 @@
 		521F17FE242ECA040046985E /* ARkitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARkitViewController.swift; sourceTree = "<group>"; };
 		521F1826242EDE540046985E /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		521F1828242EDFB00046985E /* GarbageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GarbageClassifier.mlmodel; sourceTree = "<group>"; };
+		525DBCEB25323E4600A26E87 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		526B7D7F244262C900D77617 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		5271A9232442395700D1153B /* SiteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteCell.swift; sourceTree = "<group>"; };
 		529305042444D64300D5755E /* MapKitController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapKitController.swift; sourceTree = "<group>"; };
 		529305062447614900D5755E /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		52930508244763A700D5755E /* ZeroWastePic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ZeroWastePic.jpg; sourceTree = "<group>"; };
+		8B5E5A211444E76D6A60C508 /* Pods_garbageSort.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_garbageSort.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F8275DD34B06AF5B2587CC8 /* Pods-garbageSort.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-garbageSort.release.xcconfig"; path = "Target Support Files/Pods-garbageSort/Pods-garbageSort.release.xcconfig"; sourceTree = "<group>"; };
 		AEEA1D1D24423EE90065E8F4 /* elephant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = elephant.png; sourceTree = "<group>"; };
 		AEEA1D1E24423EEA0065E8F4 /* crab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crab.png; sourceTree = "<group>"; };
@@ -79,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				588D18AB51968C1EAEFC0536 /* libPods-garbageSort.a in Frameworks */,
+				16BE322C1BC1AA632C989B87 /* Pods_garbageSort.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +119,7 @@
 		521F17E7241734B80046985E /* garbageSort */ = {
 			isa = PBXGroup;
 			children = (
+				525DBCEB25323E4600A26E87 /* GoogleService-Info.plist */,
 				AEEA1D1A24422BA20065E8F4 /* Storyboard */,
 				AEEA1D1924422B960065E8F4 /* Model */,
 				AEEA1D1824422B7B0065E8F4 /* Database */,
@@ -208,7 +211,7 @@
 		F64645C774AC570A7C551D13 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0CC04561E43BA3F603ADFCA1 /* libPods-garbageSort.a */,
+				8B5E5A211444E76D6A60C508 /* Pods_garbageSort.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				521F17E1241734B80046985E /* Sources */,
 				521F17E2241734B80046985E /* Frameworks */,
 				521F17E3241734B80046985E /* Resources */,
+				9EAC96D3B4E423E2B18C26EA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -274,6 +278,7 @@
 			files = (
 				AEF91AA02447627800D43A17 /* animal2.jpg in Resources */,
 				521F17EB241734B80046985E /* art.scnassets in Resources */,
+				525DBCEC25323E4600A26E87 /* GoogleService-Info.plist in Resources */,
 				52930509244763A700D5755E /* ZeroWastePic.jpg in Resources */,
 				AEEA1D29244253EE0065E8F4 /* lion.png in Resources */,
 				521F1804242ECC400046985E /* Main.storyboard in Resources */,
@@ -312,6 +317,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EAC96D3B4E423E2B18C26EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-garbageSort/Pods-garbageSort-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-garbageSort/Pods-garbageSort-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-garbageSort/Pods-garbageSort-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
