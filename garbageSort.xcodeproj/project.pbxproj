@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		16BE322C1BC1AA632C989B87 /* Pods_garbageSort.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B5E5A211444E76D6A60C508 /* Pods_garbageSort.framework */; };
 		320FC648252BAD15008373A8 /* AnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320FC647252BAD15008373A8 /* AnalysisViewController.swift */; };
 		320FC64B252BB85F008373A8 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 320FC64A252BB85F008373A8 /* camera.png */; };
 		320FC64E252BBFA1008373A8 /* MunicipalitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320FC64D252BBFA1008373A8 /* MunicipalitiesViewController.swift */; };
@@ -28,6 +27,7 @@
 		529305052444D64300D5755E /* MapKitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529305042444D64300D5755E /* MapKitController.swift */; };
 		529305072447614900D5755E /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529305062447614900D5755E /* AboutViewController.swift */; };
 		52930509244763A700D5755E /* ZeroWastePic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52930508244763A700D5755E /* ZeroWastePic.jpg */; };
+		98A07C8C82581495EAF98EEF /* Pods_garbageSort.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D08043FF6FC2AB54BEC02006 /* Pods_garbageSort.framework */; };
 		AEEA1D1F24423EEA0065E8F4 /* elephant.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEA1D1D24423EE90065E8F4 /* elephant.png */; };
 		AEEA1D2024423EEA0065E8F4 /* crab.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEA1D1E24423EEA0065E8F4 /* crab.png */; };
 		AEEA1D22244247450065E8F4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEA1D21244247450065E8F4 /* LoginViewController.swift */; };
@@ -40,7 +40,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		07194E137E83043B004E300D /* Pods-garbageSort.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-garbageSort.debug.xcconfig"; path = "Target Support Files/Pods-garbageSort/Pods-garbageSort.debug.xcconfig"; sourceTree = "<group>"; };
 		320FC647252BAD15008373A8 /* AnalysisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisViewController.swift; sourceTree = "<group>"; };
 		320FC64A252BB85F008373A8 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
 		320FC64D252BBFA1008373A8 /* MunicipalitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MunicipalitiesViewController.swift; sourceTree = "<group>"; };
@@ -63,8 +62,6 @@
 		529305042444D64300D5755E /* MapKitController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapKitController.swift; sourceTree = "<group>"; };
 		529305062447614900D5755E /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		52930508244763A700D5755E /* ZeroWastePic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ZeroWastePic.jpg; sourceTree = "<group>"; };
-		8B5E5A211444E76D6A60C508 /* Pods_garbageSort.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_garbageSort.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F8275DD34B06AF5B2587CC8 /* Pods-garbageSort.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-garbageSort.release.xcconfig"; path = "Target Support Files/Pods-garbageSort/Pods-garbageSort.release.xcconfig"; sourceTree = "<group>"; };
 		AEEA1D1D24423EE90065E8F4 /* elephant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = elephant.png; sourceTree = "<group>"; };
 		AEEA1D1E24423EEA0065E8F4 /* crab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crab.png; sourceTree = "<group>"; };
 		AEEA1D21244247450065E8F4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +71,9 @@
 		AEEA1D30244281190065E8F4 /* finalProject.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = finalProject.db; sourceTree = "<group>"; };
 		AEF91A9F2447627800D43A17 /* animal2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = animal2.jpg; sourceTree = "<group>"; };
 		AEF91AA1244768B700D43A17 /* bgm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgm.mp3; sourceTree = "<group>"; };
+		D08043FF6FC2AB54BEC02006 /* Pods_garbageSort.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_garbageSort.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8425156A90F319F0E2B332F /* Pods-garbageSort.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-garbageSort.debug.xcconfig"; path = "Target Support Files/Pods-garbageSort/Pods-garbageSort.debug.xcconfig"; sourceTree = "<group>"; };
+		FBFC41FFD5C789595DFE0E14 /* Pods-garbageSort.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-garbageSort.release.xcconfig"; path = "Target Support Files/Pods-garbageSort/Pods-garbageSort.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16BE322C1BC1AA632C989B87 /* Pods_garbageSort.framework in Frameworks */,
+				98A07C8C82581495EAF98EEF /* Pods_garbageSort.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,10 +91,18 @@
 		23A66318F16577006FA726BA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				07194E137E83043B004E300D /* Pods-garbageSort.debug.xcconfig */,
-				9F8275DD34B06AF5B2587CC8 /* Pods-garbageSort.release.xcconfig */,
+				F8425156A90F319F0E2B332F /* Pods-garbageSort.debug.xcconfig */,
+				FBFC41FFD5C789595DFE0E14 /* Pods-garbageSort.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		3A31FE07CB091AE1E58C1C68 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D08043FF6FC2AB54BEC02006 /* Pods_garbageSort.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		521F17DC241734B80046985E = {
@@ -103,8 +111,8 @@
 				521F17E7241734B80046985E /* garbageSort */,
 				521F17E6241734B80046985E /* Products */,
 				23A66318F16577006FA726BA /* Pods */,
-				F64645C774AC570A7C551D13 /* Frameworks */,
 				AEF91AA4244769C000D43A17 /* Recovered References */,
+				3A31FE07CB091AE1E58C1C68 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -208,14 +216,6 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
-		F64645C774AC570A7C551D13 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				8B5E5A211444E76D6A60C508 /* Pods_garbageSort.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -223,11 +223,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 521F17F9241734BB0046985E /* Build configuration list for PBXNativeTarget "garbageSort" */;
 			buildPhases = (
-				4E7B897C1CA9E3E905745506 /* [CP] Check Pods Manifest.lock */,
+				93AEB2D746C5D3A1F0737C84 /* [CP] Check Pods Manifest.lock */,
 				521F17E1241734B80046985E /* Sources */,
 				521F17E2241734B80046985E /* Frameworks */,
 				521F17E3241734B80046985E /* Resources */,
-				9EAC96D3B4E423E2B18C26EA /* [CP] Embed Pods Frameworks */,
+				3A5D445EB9A36D0768A8A02C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -297,7 +297,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4E7B897C1CA9E3E905745506 /* [CP] Check Pods Manifest.lock */ = {
+		3A5D445EB9A36D0768A8A02C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-garbageSort/Pods-garbageSort-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-garbageSort/Pods-garbageSort-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-garbageSort/Pods-garbageSort-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93AEB2D746C5D3A1F0737C84 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -317,23 +334,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9EAC96D3B4E423E2B18C26EA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-garbageSort/Pods-garbageSort-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-garbageSort/Pods-garbageSort-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-garbageSort/Pods-garbageSort-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -498,7 +498,7 @@
 		};
 		521F17FA241734BB0046985E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07194E137E83043B004E300D /* Pods-garbageSort.debug.xcconfig */;
+			baseConfigurationReference = F8425156A90F319F0E2B332F /* Pods-garbageSort.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -518,7 +518,7 @@
 		};
 		521F17FB241734BB0046985E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9F8275DD34B06AF5B2587CC8 /* Pods-garbageSort.release.xcconfig */;
+			baseConfigurationReference = FBFC41FFD5C789595DFE0E14 /* Pods-garbageSort.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
