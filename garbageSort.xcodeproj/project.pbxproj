@@ -11,6 +11,7 @@
 		320FC64B252BB85F008373A8 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 320FC64A252BB85F008373A8 /* camera.png */; };
 		320FC64E252BBFA1008373A8 /* MunicipalitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320FC64D252BBFA1008373A8 /* MunicipalitiesViewController.swift */; };
 		320FC651252BC155008373A8 /* ZeroW.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 320FC650252BC155008373A8 /* ZeroW.jpeg */; };
+		320FC66F2534D0BC008373A8 /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320FC66E2534D0BC008373A8 /* ChildViewController.swift */; };
 		521E50372533BCCC00236159 /* zero-waste.png in Resources */ = {isa = PBXBuildFile; fileRef = 521E50362533BCCC00236159 /* zero-waste.png */; };
 		521F17E9241734B80046985E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F17E8241734B80046985E /* AppDelegate.swift */; };
 		521F17EB241734B80046985E /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 521F17EA241734B80046985E /* art.scnassets */; };
@@ -45,6 +46,7 @@
 		320FC64A252BB85F008373A8 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
 		320FC64D252BBFA1008373A8 /* MunicipalitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MunicipalitiesViewController.swift; sourceTree = "<group>"; };
 		320FC650252BC155008373A8 /* ZeroW.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ZeroW.jpeg; sourceTree = "<group>"; };
+		320FC66E2534D0BC008373A8 /* ChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
 		521E50362533BCCC00236159 /* zero-waste.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zero-waste.png"; sourceTree = "<group>"; };
 		521F17E5241734B80046985E /* garbageSort.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = garbageSort.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		521F17E8241734B80046985E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				529305062447614900D5755E /* AboutViewController.swift */,
 				320FC647252BAD15008373A8 /* AnalysisViewController.swift */,
 				320FC64D252BBFA1008373A8 /* MunicipalitiesViewController.swift */,
+				320FC66E2534D0BC008373A8 /* ChildViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				521F17E9241734B80046985E /* AppDelegate.swift in Sources */,
 				529305052444D64300D5755E /* MapKitController.swift in Sources */,
 				5271A9242442395700D1153B /* SiteCell.swift in Sources */,
+				320FC66F2534D0BC008373A8 /* ChildViewController.swift in Sources */,
 				521F1827242EDE540046985E /* ScanViewController.swift in Sources */,
 				320FC64E252BBFA1008373A8 /* MunicipalitiesViewController.swift in Sources */,
 				AEEA1D26244248310065E8F4 /* MyData.swift in Sources */,

@@ -126,5 +126,12 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBAction func cameraTapped(_ sender: UIBarButtonItem) {
          present(imagePicker, animated: true, completion: nil)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "image" {
+            var ac = segue.destination as! AnalysisViewController
+            ac.newImage = self.pickedImage
+        }
+    }
 }
 

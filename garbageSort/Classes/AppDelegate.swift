@@ -33,8 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let db = Firestore.firestore()
         
-        let docRef = db.collection("region").document("iXJTXQnZJhcuBNWukqLR")
-
+        let docRef = db.collection("disposalRules").document("Toronto")
+/*
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {
                 let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
@@ -43,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("Document does not exist")
             }
         }
-
+*/
         return true
     }
     
