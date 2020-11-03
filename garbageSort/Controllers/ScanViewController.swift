@@ -23,7 +23,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var scrollView: UIScrollView!
     let wikipediaURl = "https://en.wikipedia.org/w/api.php"
     var pickedImage : UIImage?
-    var Region = "Toronto"
+    var Region = ""
     
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var lblScanResault: UILabel!
@@ -96,7 +96,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     func readDisposalRules(ScanedItem: String) {
         let db = Firestore.firestore()
         
-        let docRef = db.collection("disposalRules").document("Toronto")
+        let docRef = db.collection("disposalRules").document(self.Region)
 
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {
