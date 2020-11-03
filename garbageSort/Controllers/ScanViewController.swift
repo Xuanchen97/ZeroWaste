@@ -99,7 +99,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 let results = document.data()
                 if let idData = results?[ScanedItem] as? [String: Any]{
                     let category = idData["Category"] as? String ?? "nil"
-                    self.lblScanResault.text = "Blongs to \(category)"
+                    self.lblScanResault.text = "Belongs in \(category)"
                     print("Blongs to \(category)")
                     
                     if category == "Blue Box" {
