@@ -33,7 +33,6 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     let imagePicker = UIImagePickerController()
     
     var ScanedItem: String = ""
-    var Region: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
