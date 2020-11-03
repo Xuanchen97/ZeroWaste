@@ -26,7 +26,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var lblScanResault: UILabel!
     @IBOutlet weak var Ntitle: UINavigationItem?
-    @IBOutlet weak var imgScanResult: UIImageView!
+    @IBOutlet var imgScanResult: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
     let imagePicker = UIImagePickerController()
     
@@ -101,6 +101,18 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                     let category = idData["Category"] as? String ?? "nil"
                     self.lblScanResault.text = "Blongs to \(category)"
                     print("Blongs to \(category)")
+                    
+                    if category == "Blue Box" {
+                        let garbageboxImg = UIImage(named: "bluebox.jpg")
+                        self.imgScanResult.image = garbageboxImg
+                    }else if category == "Green Box" {
+                        let garbageboxImg = UIImage(named: "greenbox.jpg")
+                        self.imgScanResult.image = garbageboxImg
+                    }else{
+                        let garbageboxImg = UIImage(named: "blackbox.png")
+                        self.imgScanResult.image = garbageboxImg
+                    }
+                  
                 }
             } else {
                 print("Document does not exist")

@@ -449,7 +449,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HNs-FN-b8C">
-                                <rect key="frame" x="0.0" y="58" width="375" height="304"/>
+                                <rect key="frame" x="0.0" y="55" width="375" height="292"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mvU-xG-puL">
@@ -470,19 +470,19 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUi-UO-65e">
-                                <rect key="frame" x="39" y="378" width="302" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUi-UO-65e">
+                                <rect key="frame" x="36" y="363" width="302" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cx5-Z9-he9">
-                                <rect key="frame" x="67" y="427" width="240" height="128"/>
+                                <rect key="frame" x="107" y="412" width="160" height="184"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AEl-nz-nDe">
-                                <rect key="frame" x="122" y="586" width="131" height="30"/>
+                                <rect key="frame" x="122" y="597" width="131" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Report if it's wrong">
                                     <color key="titleColor" systemColor="systemRedColor"/>
@@ -498,6 +498,7 @@
                     <connections>
                         <outlet property="Ntitle" destination="Ggi-Cz-vWc" id="IU9-Mh-3xd"/>
                         <outlet property="imageView" destination="HNs-FN-b8C" id="fob-zx-Vs7"/>
+                        <outlet property="imgScanResult" destination="cx5-Z9-he9" id="rYJ-bq-V21"/>
                         <outlet property="lblScanResault" destination="hUi-UO-65e" id="NJ2-pq-eJP"/>
                     </connections>
                 </viewController>

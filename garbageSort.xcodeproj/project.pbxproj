@@ -28,6 +28,9 @@
 		529305052444D64300D5755E /* MapKitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529305042444D64300D5755E /* MapKitController.swift */; };
 		529305072447614900D5755E /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529305062447614900D5755E /* AboutViewController.swift */; };
 		52930509244763A700D5755E /* ZeroWastePic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52930508244763A700D5755E /* ZeroWastePic.jpg */; };
+		52CBF0682550F39C0071C26E /* blackbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 52CBF0652550F39C0071C26E /* blackbox.png */; };
+		52CBF0692550F39C0071C26E /* greenbox.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52CBF0662550F39C0071C26E /* greenbox.jpg */; };
+		52CBF06D2550F4090071C26E /* bluebox.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52CBF06C2550F4090071C26E /* bluebox.jpg */; };
 		98A07C8C82581495EAF98EEF /* Pods_garbageSort.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D08043FF6FC2AB54BEC02006 /* Pods_garbageSort.framework */; };
 		AEEA1D1F24423EEA0065E8F4 /* elephant.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEA1D1D24423EE90065E8F4 /* elephant.png */; };
 		AEEA1D2024423EEA0065E8F4 /* crab.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEA1D1E24423EEA0065E8F4 /* crab.png */; };
@@ -64,6 +67,9 @@
 		529305042444D64300D5755E /* MapKitController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapKitController.swift; sourceTree = "<group>"; };
 		529305062447614900D5755E /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		52930508244763A700D5755E /* ZeroWastePic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ZeroWastePic.jpg; sourceTree = "<group>"; };
+		52CBF0652550F39C0071C26E /* blackbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackbox.png; sourceTree = "<group>"; };
+		52CBF0662550F39C0071C26E /* greenbox.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = greenbox.jpg; sourceTree = "<group>"; };
+		52CBF06C2550F4090071C26E /* bluebox.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bluebox.jpg; sourceTree = "<group>"; };
 		AEEA1D1D24423EE90065E8F4 /* elephant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = elephant.png; sourceTree = "<group>"; };
 		AEEA1D1E24423EEA0065E8F4 /* crab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crab.png; sourceTree = "<group>"; };
 		AEEA1D21244247450065E8F4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -171,6 +177,9 @@
 		521F1803242ECB1C0046985E /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				52CBF06C2550F4090071C26E /* bluebox.jpg */,
+				52CBF0652550F39C0071C26E /* blackbox.png */,
+				52CBF0662550F39C0071C26E /* greenbox.jpg */,
 				521E50362533BCCC00236159 /* zero-waste.png */,
 				320FC650252BC155008373A8 /* ZeroW.jpeg */,
 				320FC64A252BB85F008373A8 /* camera.png */,
@@ -285,7 +294,9 @@
 				525DBCEC25323E4600A26E87 /* GoogleService-Info.plist in Resources */,
 				52930509244763A700D5755E /* ZeroWastePic.jpg in Resources */,
 				AEEA1D29244253EE0065E8F4 /* lion.png in Resources */,
+				52CBF0682550F39C0071C26E /* blackbox.png in Resources */,
 				521F1804242ECC400046985E /* Main.storyboard in Resources */,
+				52CBF06D2550F4090071C26E /* bluebox.jpg in Resources */,
 				AEF91AA2244768B700D43A17 /* bgm.mp3 in Resources */,
 				320FC64B252BB85F008373A8 /* camera.png in Resources */,
 				AEEA1D2024423EEA0065E8F4 /* crab.png in Resources */,
@@ -293,6 +304,7 @@
 				521F17FD241735280046985E /* Waste and Recycling.mp4 in Resources */,
 				AEEA1D1F24423EEA0065E8F4 /* elephant.png in Resources */,
 				320FC651252BC155008373A8 /* ZeroW.jpeg in Resources */,
+				52CBF0692550F39C0071C26E /* greenbox.jpg in Resources */,
 				521F17F2241734BB0046985E /* Assets.xcassets in Resources */,
 				AEEA1D31244281190065E8F4 /* finalProject.db in Resources */,
 			);
