@@ -15,7 +15,7 @@ import Vision
 import SwiftyJSON
 import Alamofire
 import SDWebImage
-
+import Firebase
 
 class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -24,9 +24,14 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     var pickedImage : UIImage?
     
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var lblScanResault: UILabel!
     @IBOutlet weak var Ntitle: UINavigationItem?
+    @IBOutlet var imgScanResult: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
     let imagePicker = UIImagePickerController()
+    
+    var ScanedItem: String = ""
+    var Region: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +57,6 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             
                }
         
-               
                imagePicker.dismiss(animated: true, completion: nil)
     }
     
@@ -68,7 +72,13 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             }
             //the string describes what the classification is
             self.Ntitle?.title = result.identifier.capitalized
-            self.requestInfo(garbageName: result.identifier)
+            self.ScanedItem = result.identifier.capitalized
+        
+            
+          //  self.requestInfo(garbageName: result.identifier)
+            
+            //read data from the disposal rule database
+            self.readDisposalRules(ScanedItem: self.ScanedItem)
         }
         let handler = VNImageRequestHandler(ciImage: garbageImage)
         do {
@@ -76,6 +86,37 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         }
         catch {
             print(error)
+        }
+    }
+    
+    func readDisposalRules(ScanedItem: String) {
+        let db = Firestore.firestore()
+        
+        let docRef = db.collection("disposalRules").document("Toronto")
+
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let results = document.data()
+                if let idData = results?[ScanedItem] as? [String: Any]{
+                    let category = idData["Category"] as? String ?? "nil"
+                    self.lblScanResault.text = "Belongs in \(category)"
+                    print("Blongs to \(category)")
+                    
+                    if category == "Blue Box" {
+                        let garbageboxImg = UIImage(named: "bluebox.jpg")
+                        self.imgScanResult.image = garbageboxImg
+                    }else if category == "Green Box" {
+                        let garbageboxImg = UIImage(named: "greenbox.jpg")
+                        self.imgScanResult.image = garbageboxImg
+                    }else{
+                        let garbageboxImg = UIImage(named: "blackbox.png")
+                        self.imgScanResult.image = garbageboxImg
+                    }
+                  
+                }
+            } else {
+                print("Document does not exist")
+            }
         }
     }
     
@@ -90,28 +131,11 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 
                 let pageid = garbageJSON["query"]["pageids"][0].stringValue
                 
-                let garbageDescription = garbageJSON["query"]["pages"][pageid]["extract"].stringValue
                 let garbageImageURL = garbageJSON["query"]["pages"][pageid]["thumbnail"]["source"].stringValue
-            
-//                self.label.text = garbageDescription
                 
                 self.imageView.sd_setImage(with: URL(string: garbageImageURL), completed: { (image, error,  cache, url) in
                     self.imageView.image = self.pickedImage
-//                    if let currentImage = self.imageView.image {
-//
-////                        guard let dominantColor = ColorThief.getColor(from: currentImage) else {
-////                            fatalError("Can't get dominant color")
-////                        }
-////
-//
-//                        DispatchQueue.main.async {
-//                            self.navigationController?.navigationBar.isTranslucent = true
-//
-//                        }
-//                    } else {
-//                        self.imageView.image = self.pickedImage
-//                        //self.label.text = "Could not get information from Wikipedia."
-//                    }
+
                 })
                 
             }

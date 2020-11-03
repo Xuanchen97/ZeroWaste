@@ -33,12 +33,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let db = Firestore.firestore()
         
-        let docRef = db.collection("region").document("iXJTXQnZJhcuBNWukqLR")
+        let docRef = db.collection("disposalRules").document("Toronto")
 
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {
-                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
-                print("Document data: \(dataDescription)")
+//                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+//                print("Document data: \(dataDescription)")
+//                print(document.get("Cardboard") ?? "nil")
+                let results = document.data()
+                if let idData = results?["Cardboard"] as? [String: Any]{
+                    let category = idData["Category"] as? String ?? "nil"
+                    print(category)
+                    
+                }
             } else {
                 print("Document does not exist")
             }
