@@ -17,11 +17,13 @@ import Alamofire
 import SDWebImage
 
 
+
 class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     let wikipediaURl = "https://en.wikipedia.org/w/api.php"
     var pickedImage : UIImage?
+    var Region = "Toronto"
     
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var Ntitle: UINavigationItem?
@@ -33,6 +35,9 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         imagePicker.delegate = self
         imagePicker.sourceType = .camera
         imagePicker.allowsEditing = true
+        let mainDelegate = UIApplication.shared.delegate as! AppDelegate
+        self.Region = mainDelegate.region
+        print("Selected region: \(self.Region)")
     }
     // image Picker dekegate method
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {

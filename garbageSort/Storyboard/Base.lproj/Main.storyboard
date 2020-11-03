@@ -166,32 +166,6 @@
             </objects>
             <point key="canvasLocation" x="-1492" y="824"/>
         </scene>
-        <!--Municipalities View Controller-->
-        <scene sceneID="qGg-NP-tk5">
-            <objects>
-                <viewController id="lE1-bl-gQL" customClass="MunicipalitiesViewController" customModule="garbageSort" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="MH5-Ly-EhE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4OI-Hb-1ax">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem id="Jv5-Gm-IA4">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="LG6-ty-LPM"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="ZdX-xf-t9C"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6ij-DM-dpI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="870" y="99"/>
-        </scene>
         <!--Table View Controller-->
         <scene sceneID="eOi-NG-INh">
             <objects>
@@ -359,7 +333,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="IJD-Vk-vwn" kind="presentation" id="An3-DF-5la"/>
+                                    <segue destination="IJD-Vk-vwn" kind="presentation" identifier="passRegion" id="An3-DF-5la"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scan your garbage now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sp-Od-QYk">
@@ -386,7 +360,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Toronto"/>
                                                     <connections>
-                                                        <action selector="toMunicipalities" destination="BV1-FR-VrT" eventType="touchUpInside" id="8gq-pK-RBf"/>
+                                                        <action selector="showBarButtonDropDownWith_sender:" destination="BV1-FR-VrT" eventType="touchUpInside" id="TLY-RM-MXB"/>
                                                     </connections>
                                                 </button>
                                             </barButtonItem>
@@ -400,7 +374,7 @@
                     </view>
                     <connections>
                         <outlet property="AI" destination="Ghr-Ur-P1k" id="ucI-ih-bOg"/>
-                        <segue destination="lE1-bl-gQL" kind="presentation" identifier="toMunicipalities" id="Jzq-Ob-Cjk"/>
+                        <outlet property="citiesBarButton" destination="APJ-SJ-TAZ" id="hfb-SO-5dm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
@@ -511,7 +485,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E1n-ve-fOg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="7Id-Jr-FAJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="823.53823088455783"/>
+            <point key="canvasLocation" x="137" y="824"/>
         </scene>
         <!--Map Kit Controller-->
         <scene sceneID="iis-3b-Psx">
@@ -677,6 +651,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="1CT-K2-nmc"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
