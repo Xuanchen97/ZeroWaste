@@ -9,6 +9,8 @@
 import UIKit
 import SceneKit
 import ARKit
+import DropDown
+import Firebase
 
 class ViewController: UIViewController, ARSCNViewDelegate {
     
@@ -16,11 +18,25 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var AI : UIButton!
     
     var soundPlayer : AVAudioPlayer?
+    var regions = [String]()
     
     let mainDelegate = UIApplication.shared.delegate as! AppDelegate
     
-    @IBAction func toMunicipalities(){
-        self.performSegue(withIdentifier: "toMunicipalities", sender: nil)
+    //@IBOutlet weak var citiesBarButton: UIBarButtonItem!
+    @IBOutlet weak var citiesBarButton: UIButton!
+    @IBOutlet var city : UIButton!
+    let cityMenu = DropDown()
+    
+    @IBAction func showBarButtonDropDown(_sender: AnyObject)
+    {
+        cityMenu.selectionAction = {
+            (index: Int, item: String) in print("Selected city: \(item)")
+            self.citiesBarButton.setTitle("\(item)", for: .normal)
+            self.mainDelegate.region = "\(item)"
+        }
+        cityMenu.width = 140
+        cityMenu.bottomOffset = CGPoint(x: 0, y: (cityMenu.anchorView?.plainView.bounds.height)!)
+        cityMenu.show()
     }
     
     @IBAction func unwindToHomeVC(sender : UIStoryboardSegue){
@@ -46,8 +62,20 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 //    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let db = Firestore.firestore()
+        db.collection("disposalRules").getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        print("\(document.documentID)")
+                        self.regions.append("\(document.documentID)")
+                        print(self.regions)
+                    }
+                    self.cityMenu.anchorView = self.citiesBarButton
+                    self.cityMenu.dataSource = self.regions
+                    self.cityMenu.cellConfiguration = {(index, item) in return "\(item)"}
+                }
+        }
     }
-    
-
 }

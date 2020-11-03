@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var databasePath : String?
     var people : [MyData] = []
     var loginFlag : Bool = false
+    var region : String = "Toronto"
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -34,23 +35,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let db = Firestore.firestore()
         
         let docRef = db.collection("disposalRules").document("Toronto")
-
-        docRef.getDocument { (document, error) in
-            if let document = document, document.exists {
-//                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
-//                print("Document data: \(dataDescription)")
-//                print(document.get("Cardboard") ?? "nil")
-                let results = document.data()
-                if let idData = results?["Cardboard"] as? [String: Any]{
-                    let category = idData["Category"] as? String ?? "nil"
-                    print(category)
-                    
-                }
-            } else {
-                print("Document does not exist")
-            }
-        }
-
+/*
+         docRef.getDocument { (document, error) in
+             if let document = document, document.exists {
+                 let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                 print("Document data: \(dataDescription)")
+             } else {
+                 print("Document does not exist")
+             }
+         }
+*/
         return true
     }
     
