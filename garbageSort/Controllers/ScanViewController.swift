@@ -99,7 +99,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 fatalError("Could not complete classfication")
             }
             //the string describes what the classification is
-            self.garbageName = result.identifier.capitalized
+            self.garbageName = result1.identifier.capitalized
             self.Ntitle?.title = self.garbageName
             self.ScanedItem = self.garbageName!
         
