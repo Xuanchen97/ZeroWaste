@@ -57,6 +57,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         self.Region = mainDelegate.region
         segmentedControl.isHidden = true
         print("Selected region: \(self.Region)")
+        
         if mainDelegate.CIImage != nil{
             detect(garbageImage: mainDelegate.CIImage)
             imageView.image = mainDelegate.userPickedImage
@@ -75,9 +76,9 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                    guard let ciImage = CIImage(image: userPickedImage) else {
                        fatalError("Could not convert image to CIImage.")
                    }
-            mainDelegate.CIImage = ciImage
+                mainDelegate.CIImage = ciImage
                    pickedImage = userPickedImage
-            mainDelegate.userPickedImage = userPickedImage
+                mainDelegate.userPickedImage = userPickedImage
                    detect(garbageImage: ciImage)
 
                    imageView.image = userPickedImage

@@ -40,7 +40,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     @IBAction func unwindToHomeVC(sender : UIStoryboardSegue){
-        
+        mainDelegate.CIImage = nil
     }
     
 //    override func viewWillAppear(_ animated: Bool) {
@@ -59,10 +59,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 //            AI.alpha = 0.5
 //        }
 //    }
-//    
+//
+  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        mainDelegate.CIImage = nil
         let db = Firestore.firestore()
         db.collection("disposalRules").getDocuments() { (querySnapshot, err) in
                 if let err = err {
