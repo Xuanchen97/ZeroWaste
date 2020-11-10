@@ -24,6 +24,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     let wikipediaURl = "https://en.wikipedia.org/w/api.php"
     var pickedImage : UIImage?
     var Region = ""
+    var garbageName : String?
     
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var lblScanResault: UILabel!
@@ -33,16 +34,25 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     let imagePicker = UIImagePickerController()
     
     var ScanedItem: String = ""
+    let mainDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
         imagePicker.sourceType = .camera
         imagePicker.allowsEditing = true
-        let mainDelegate = UIApplication.shared.delegate as! AppDelegate
+        
         self.Region = mainDelegate.region
         print("Selected region: \(self.Region)")
+        if mainDelegate.CIImage != nil{
+            detect(garbageImage: mainDelegate.CIImage)
+            imageView.image = mainDelegate.userPickedImage
+            self.Ntitle?.title = mainDelegate.gn
+            self.ScanedItem = mainDelegate.gn
+            self.readDisposalRules(ScanedItem: self.ScanedItem)
+        }
     }
+    
     // image Picker dekegate method
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
 
@@ -52,12 +62,12 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                    guard let ciImage = CIImage(image: userPickedImage) else {
                        fatalError("Could not convert image to CIImage.")
                    }
-                   
+            mainDelegate.CIImage = ciImage
                    pickedImage = userPickedImage
-
+            mainDelegate.userPickedImage = userPickedImage
                    detect(garbageImage: ciImage)
 
-                    imageView.image = userPickedImage
+                   imageView.image = userPickedImage
             
                }
         
@@ -75,8 +85,9 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 fatalError("Could not complete classfication")
             }
             //the string describes what the classification is
-            self.Ntitle?.title = result.identifier.capitalized
-            self.ScanedItem = result.identifier.capitalized
+            self.garbageName = result.identifier.capitalized
+            self.Ntitle?.title = self.garbageName
+            self.ScanedItem = self.garbageName!
         
             
           //  self.requestInfo(garbageName: result.identifier)

@@ -62,6 +62,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 //    
     override func viewDidLoad() {
         super.viewDidLoad()
+        mainDelegate.CIImage = nil
         let db = Firestore.firestore()
         db.collection("disposalRules").getDocuments() { (querySnapshot, err) in
                 if let err = err {

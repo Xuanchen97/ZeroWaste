@@ -19,6 +19,8 @@ class ChildViewController: UIViewController {
     var key = "path"
     var type = ""
     var question = ""
+    var gName : String!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +39,7 @@ class ChildViewController: UIViewController {
     }
     
     func readData(){
+        let mainDelegate = UIApplication.shared.delegate as! AppDelegate
         
         let db = Firestore.firestore()
         
@@ -53,11 +56,21 @@ class ChildViewController: UIViewController {
                     print("Document data: \(dataDescription)")
                 }else{
                     let type = document.get("type")
-                    label.text = type as! String
+                    
+                    self.gName = type as! String
+                    print("name: \(self.gName)")
+                    mainDelegate.gn = type as! String
+                    performSegue(withIdentifier: "test", sender: self)
                 }
             } else {
                 print("Document does not exist")
             }
         }
     }
+    /*
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var vc = segue.destination as! ScanViewController
+        vc.garbageName = self.gName
+    }*/
+    
 }

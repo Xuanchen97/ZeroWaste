@@ -12,7 +12,7 @@ import SQLite3
 import Firebase
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UIImagePickerControllerDelegate {
 
     var window: UIWindow?
     var databaseName : String? = "finalProject.db"
@@ -20,7 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var people : [MyData] = []
     var loginFlag : Bool = false
     var region : String = "Toronto"
-
+    var CIImage : CIImage!
+    var userPickedImage : UIImage!
+    var gn : String!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         

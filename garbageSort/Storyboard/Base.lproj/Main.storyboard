@@ -2,7 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -417,7 +418,7 @@
         <!--Scan View Controller-->
         <scene sceneID="0MS-Kp-JIN">
             <objects>
-                <viewController id="IJD-Vk-vwn" customClass="ScanViewController" customModule="garbageSort" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="scan" id="IJD-Vk-vwn" customClass="ScanViewController" customModule="garbageSort" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Ab-p2-uxc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -652,6 +653,7 @@
                         <outlet property="label" destination="Khc-Wc-dn7" id="WsK-Jn-Aen"/>
                         <outlet property="no" destination="RxH-bf-Hnw" id="JSw-1T-Fss"/>
                         <outlet property="yes" destination="0hN-RH-tRr" id="kZZ-Fp-qgW"/>
+                        <segue destination="IJD-Vk-vwn" kind="presentation" identifier="test" id="ISe-YN-tvl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X4Z-GR-epH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -659,6 +661,9 @@
             <point key="canvasLocation" x="869.60000000000002" y="1336.7316341829087"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ISe-YN-tvl"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="ZeroW.jpeg" width="526" height="178"/>
         <image name="animal2.jpg" width="1920" height="1080"/>
