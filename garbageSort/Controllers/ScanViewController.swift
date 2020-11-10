@@ -190,5 +190,18 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             ac.newImage = self.pickedImage
         }
     }
+    private func storeImage(image: UIImage, forKey key: String) {
+        if let pngRepresentation = image.pngData() {
+            UserDefaults.standard.set(pngRepresentation, forKey: key)
+        }
+    }
+    private func retrieveImage(forKey key: String) -> UIImage? {
+            if let imageData = UserDefaults.standard.object(forKey: key) as? Data,
+                let image = UIImage(data: imageData) {
+                
+                return image
+            }
+        return nil
+    }
 }
 
