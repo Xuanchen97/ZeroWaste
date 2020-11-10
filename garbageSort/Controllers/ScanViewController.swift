@@ -62,6 +62,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             imageView.image = mainDelegate.userPickedImage
             self.Ntitle?.title = mainDelegate.gn
             self.ScanedItem = mainDelegate.gn
+            self.ResultPercentage.isHidden = true
             self.readDisposalRules(ScanedItem: self.ScanedItem)
         }
     }
@@ -113,6 +114,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             self.readDisposalRules(ScanedItem: self.result1)
             
             self.Ntitle?.title = self.result1
+            self.ResultPercentage.isHidden = false
             self.ResultPercentage.text = self.result1Percentage
             
             guard let result2 = request.results?[1] as? VNClassificationObservation else {
