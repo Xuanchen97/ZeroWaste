@@ -11,6 +11,7 @@
 		320FC64B252BB85F008373A8 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 320FC64A252BB85F008373A8 /* camera.png */; };
 		320FC651252BC155008373A8 /* ZeroW.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 320FC650252BC155008373A8 /* ZeroW.jpeg */; };
 		320FC66F2534D0BC008373A8 /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320FC66E2534D0BC008373A8 /* ChildViewController.swift */; };
+		52126E732557A62A00F0B770 /* GarbageClassifier1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 52126E722557A62A00F0B770 /* GarbageClassifier1.mlmodel */; };
 		521E50372533BCCC00236159 /* zero-waste.png in Resources */ = {isa = PBXBuildFile; fileRef = 521E50362533BCCC00236159 /* zero-waste.png */; };
 		521F17E9241734B80046985E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F17E8241734B80046985E /* AppDelegate.swift */; };
 		521F17EB241734B80046985E /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 521F17EA241734B80046985E /* art.scnassets */; };
@@ -21,7 +22,6 @@
 		521F17FF242ECA040046985E /* ARkitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F17FE242ECA040046985E /* ARkitViewController.swift */; };
 		521F1804242ECC400046985E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521F17EE241734B80046985E /* Main.storyboard */; };
 		521F1827242EDE540046985E /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F1826242EDE540046985E /* ScanViewController.swift */; };
-		521F1829242EDFB10046985E /* GarbageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 521F1828242EDFB00046985E /* GarbageClassifier.mlmodel */; };
 		524A46A324428C3900D95556 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526B7D7F244262C900D77617 /* TableViewController.swift */; };
 		525DBCEC25323E4600A26E87 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 525DBCEB25323E4600A26E87 /* GoogleService-Info.plist */; };
 		5271A9242442395700D1153B /* SiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5271A9232442395700D1153B /* SiteCell.swift */; };
@@ -48,6 +48,7 @@
 		320FC64A252BB85F008373A8 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
 		320FC650252BC155008373A8 /* ZeroW.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ZeroW.jpeg; sourceTree = "<group>"; };
 		320FC66E2534D0BC008373A8 /* ChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
+		52126E722557A62A00F0B770 /* GarbageClassifier1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GarbageClassifier1.mlmodel; sourceTree = "<group>"; };
 		521E50362533BCCC00236159 /* zero-waste.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zero-waste.png"; sourceTree = "<group>"; };
 		521F17E5241734B80046985E /* garbageSort.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = garbageSort.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		521F17E8241734B80046985E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,7 +61,6 @@
 		521F17FC241735280046985E /* Waste and Recycling.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Waste and Recycling.mp4"; sourceTree = "<group>"; };
 		521F17FE242ECA040046985E /* ARkitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARkitViewController.swift; sourceTree = "<group>"; };
 		521F1826242EDE540046985E /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
-		521F1828242EDFB00046985E /* GarbageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GarbageClassifier.mlmodel; sourceTree = "<group>"; };
 		525DBCEB25323E4600A26E87 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		526B7D7F244262C900D77617 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		5271A9232442395700D1153B /* SiteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteCell.swift; sourceTree = "<group>"; };
@@ -206,7 +206,7 @@
 		AEEA1D1924422B960065E8F4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				521F1828242EDFB00046985E /* GarbageClassifier.mlmodel */,
+				52126E722557A62A00F0B770 /* GarbageClassifier1.mlmodel */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -360,7 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEEA1D22244247450065E8F4 /* LoginViewController.swift in Sources */,
-				521F1829242EDFB10046985E /* GarbageClassifier.mlmodel in Sources */,
+				52126E732557A62A00F0B770 /* GarbageClassifier1.mlmodel in Sources */,
 				AEEA1D24244247540065E8F4 /* RegisterViewController.swift in Sources */,
 				524A46A324428C3900D95556 /* TableViewController.swift in Sources */,
 				521F17FF242ECA040046985E /* ARkitViewController.swift in Sources */,
