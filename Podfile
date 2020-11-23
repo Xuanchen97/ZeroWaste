@@ -12,5 +12,6 @@ pod 'SwiftyJSON'
 pod 'SDWebImage' 
 pod 'Firebase/Analytics' 
 pod 'Firebase/Firestore'
+pod 'Firebase/Storage'
 pod 'DropDown'
 end

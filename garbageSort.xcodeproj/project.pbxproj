@@ -12,6 +12,7 @@
 		320FC651252BC155008373A8 /* ZeroW.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 320FC650252BC155008373A8 /* ZeroW.jpeg */; };
 		320FC66F2534D0BC008373A8 /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320FC66E2534D0BC008373A8 /* ChildViewController.swift */; };
 		326EA49C256B5B9A00670A30 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326EA49B256B5B9A00670A30 /* SearchViewController.swift */; };
+		387BE363256C647C006D3F05 /* FireBaseStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387BE362256C647C006D3F05 /* FireBaseStorageManager.swift */; };
 		52126E732557A62A00F0B770 /* GarbageClassifier1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 52126E722557A62A00F0B770 /* GarbageClassifier1.mlmodel */; };
 		521E50372533BCCC00236159 /* zero-waste.png in Resources */ = {isa = PBXBuildFile; fileRef = 521E50362533BCCC00236159 /* zero-waste.png */; };
 		521F17E9241734B80046985E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F17E8241734B80046985E /* AppDelegate.swift */; };
@@ -50,6 +51,7 @@
 		320FC650252BC155008373A8 /* ZeroW.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ZeroW.jpeg; sourceTree = "<group>"; };
 		320FC66E2534D0BC008373A8 /* ChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
 		326EA49B256B5B9A00670A30 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		387BE362256C647C006D3F05 /* FireBaseStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseStorageManager.swift; sourceTree = "<group>"; };
 		52126E722557A62A00F0B770 /* GarbageClassifier1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GarbageClassifier1.mlmodel; sourceTree = "<group>"; };
 		521E50362533BCCC00236159 /* zero-waste.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zero-waste.png"; sourceTree = "<group>"; };
 		521F17E5241734B80046985E /* garbageSort.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = garbageSort.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,6 +175,7 @@
 				521F17E8241734B80046985E /* AppDelegate.swift */,
 				AEEA1D25244248310065E8F4 /* MyData.swift */,
 				5271A9232442395700D1153B /* SiteCell.swift */,
+				387BE362256C647C006D3F05 /* FireBaseStorageManager.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				521F17FF242ECA040046985E /* ARkitViewController.swift in Sources */,
 				521F17ED241734B80046985E /* ViewController.swift in Sources */,
 				529305072447614900D5755E /* AboutViewController.swift in Sources */,
+				387BE363256C647C006D3F05 /* FireBaseStorageManager.swift in Sources */,
 				320FC648252BAD15008373A8 /* AnalysisViewController.swift in Sources */,
 				521F17E9241734B80046985E /* AppDelegate.swift in Sources */,
 				529305052444D64300D5755E /* MapKitController.swift in Sources */,
