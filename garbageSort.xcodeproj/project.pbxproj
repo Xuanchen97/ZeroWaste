@@ -11,6 +11,7 @@
 		320FC64B252BB85F008373A8 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 320FC64A252BB85F008373A8 /* camera.png */; };
 		320FC651252BC155008373A8 /* ZeroW.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 320FC650252BC155008373A8 /* ZeroW.jpeg */; };
 		320FC66F2534D0BC008373A8 /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320FC66E2534D0BC008373A8 /* ChildViewController.swift */; };
+		326EA49C256B5B9A00670A30 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326EA49B256B5B9A00670A30 /* SearchViewController.swift */; };
 		52126E732557A62A00F0B770 /* GarbageClassifier1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 52126E722557A62A00F0B770 /* GarbageClassifier1.mlmodel */; };
 		521E50372533BCCC00236159 /* zero-waste.png in Resources */ = {isa = PBXBuildFile; fileRef = 521E50362533BCCC00236159 /* zero-waste.png */; };
 		521F17E9241734B80046985E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F17E8241734B80046985E /* AppDelegate.swift */; };
@@ -48,6 +49,7 @@
 		320FC64A252BB85F008373A8 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
 		320FC650252BC155008373A8 /* ZeroW.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ZeroW.jpeg; sourceTree = "<group>"; };
 		320FC66E2534D0BC008373A8 /* ChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
+		326EA49B256B5B9A00670A30 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		52126E722557A62A00F0B770 /* GarbageClassifier1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GarbageClassifier1.mlmodel; sourceTree = "<group>"; };
 		521E50362533BCCC00236159 /* zero-waste.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zero-waste.png"; sourceTree = "<group>"; };
 		521F17E5241734B80046985E /* garbageSort.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = garbageSort.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,6 +162,7 @@
 				529305062447614900D5755E /* AboutViewController.swift */,
 				320FC647252BAD15008373A8 /* AnalysisViewController.swift */,
 				320FC66E2534D0BC008373A8 /* ChildViewController.swift */,
+				326EA49B256B5B9A00670A30 /* SearchViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				326EA49C256B5B9A00670A30 /* SearchViewController.swift in Sources */,
 				AEEA1D22244247450065E8F4 /* LoginViewController.swift in Sources */,
 				52126E732557A62A00F0B770 /* GarbageClassifier1.mlmodel in Sources */,
 				AEEA1D24244247540065E8F4 /* RegisterViewController.swift in Sources */,

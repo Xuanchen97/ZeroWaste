@@ -169,9 +169,9 @@
         <!--Table View Controller-->
         <scene sceneID="eOi-NG-INh">
             <objects>
-                <viewController id="Lup-SG-f6m" customClass="TableViewController" customModule="garbageSort" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Lup-SG-f6m" customClass="TableViewController" customModule="garbageSort" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wPl-x0-ezf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BQk-EJ-lEZ">
@@ -300,14 +300,13 @@
         <!--View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="garbageSort" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BV1-FR-VrT" customClass="ViewController" customModule="garbageSort" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7M1-uO-ewA">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7M1-uO-ewA">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="AR" width="107" id="gEo-WM-8CZ">
                                         <connections>
@@ -326,9 +325,11 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ghr-Ur-P1k">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ghr-Ur-P1k">
                                 <rect key="frame" x="127" y="273" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="nNh-Ci-AoN"/>
+                                </constraints>
                                 <state key="normal" image="camera.png">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -336,41 +337,59 @@
                                     <segue destination="IJD-Vk-vwn" kind="presentation" identifier="passRegion" id="An3-DF-5la"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scan your garbage now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sp-Od-QYk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan your garbage now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sp-Od-QYk">
                                 <rect key="frame" x="75" y="430" width="224" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ZeroW.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="2SJ-mK-QcT">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ZeroW.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="2SJ-mK-QcT">
                                 <rect key="frame" x="33" y="75" width="309" height="151"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LyE-20-WDs">
-                                <rect key="frame" x="0.0" y="31" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LyE-20-WDs">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="rHv-07-dHs"/>
+                                </constraints>
                                 <items>
                                     <navigationItem title="Welcome!" id="M7q-FW-ao6">
-                                        <leftBarButtonItems>
-                                            <barButtonItem id="jJ7-Sm-KJk"/>
-                                            <barButtonItem style="plain" id="MA0-dm-YlO">
-                                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="APJ-SJ-TAZ">
-                                                    <rect key="frame" x="16" y="7" width="83" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Toronto"/>
-                                                    <connections>
-                                                        <action selector="showBarButtonDropDownWith_sender:" destination="BV1-FR-VrT" eventType="touchUpInside" id="TLY-RM-MXB"/>
-                                                    </connections>
-                                                </button>
-                                            </barButtonItem>
-                                        </leftBarButtonItems>
+                                        <barButtonItem key="leftBarButtonItem" id="MA0-dm-YlO">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="APJ-SJ-TAZ">
+                                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Toronto"/>
+                                                <connections>
+                                                    <action selector="showBarButtonDropDownWith_sender:" destination="BV1-FR-VrT" eventType="touchUpInside" id="TLY-RM-MXB"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" id="G0Z-fb-Pmu">
+                                            <connections>
+                                                <segue destination="QgK-p4-4JT" kind="presentation" id="yfe-ea-JeT"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2SJ-mK-QcT" firstAttribute="top" secondItem="LyE-20-WDs" secondAttribute="bottom" constant="31" id="CVG-BB-dV0"/>
+                            <constraint firstItem="Ghr-Ur-P1k" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" constant="127" id="Eib-4e-gOT"/>
+                            <constraint firstItem="Ghr-Ur-P1k" firstAttribute="centerY" secondItem="U0K-SW-4ec" secondAttribute="centerY" id="FYi-3C-xll"/>
+                            <constraint firstItem="LyE-20-WDs" firstAttribute="leading" secondItem="7M1-uO-ewA" secondAttribute="leading" id="FfA-UG-XZm"/>
+                            <constraint firstAttribute="trailing" secondItem="LyE-20-WDs" secondAttribute="trailing" id="OmT-43-Jiy"/>
+                            <constraint firstItem="LyE-20-WDs" firstAttribute="top" secondItem="fQZ-KI-GVf" secondAttribute="top" id="RSv-G7-y4T"/>
+                            <constraint firstItem="LyE-20-WDs" firstAttribute="trailing" secondItem="7M1-uO-ewA" secondAttribute="trailing" id="SSg-0T-Mrt"/>
+                            <constraint firstItem="9sp-Od-QYk" firstAttribute="top" secondItem="Ghr-Ur-P1k" secondAttribute="bottom" constant="37" id="dAX-xp-JOD"/>
+                            <constraint firstItem="Ghr-Ur-P1k" firstAttribute="top" secondItem="2SJ-mK-QcT" secondAttribute="bottom" constant="47" id="hzh-xZ-ucW"/>
+                            <constraint firstItem="LyE-20-WDs" firstAttribute="centerX" secondItem="9sp-Od-QYk" secondAttribute="centerX" id="jHI-pZ-ptF"/>
+                            <constraint firstItem="LyE-20-WDs" firstAttribute="leading" secondItem="U0K-SW-4ec" secondAttribute="leading" id="mH6-4P-pSR"/>
+                            <constraint firstItem="LyE-20-WDs" firstAttribute="centerX" secondItem="Ghr-Ur-P1k" secondAttribute="centerX" id="nqB-Ds-5EA"/>
+                            <constraint firstItem="7M1-uO-ewA" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="vgN-N2-Scc"/>
+                            <constraint firstItem="LyE-20-WDs" firstAttribute="centerX" secondItem="2SJ-mK-QcT" secondAttribute="centerX" id="wMP-f2-C6g"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="AI" destination="Ghr-Ur-P1k" id="ucI-ih-bOg"/>
@@ -381,12 +400,66 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="98.50074962518741"/>
         </scene>
+        <!--Search View Controller-->
+        <scene sceneID="Qgw-J5-ms2">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="QgK-p4-4JT" customClass="SearchViewController" customModule="garbageSort" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gj2-Sd-0M7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ws-rw-KfK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="HNF-U3-kXa"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem id="205-Lz-CtE">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt;-" id="mm7-aH-l7c"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <searchBar contentMode="redraw" misplaced="YES" searchBarStyle="minimal" placeholder="Please enter your postal code" translatesAutoresizingMaskIntoConstraints="NO" id="Amc-6B-PHy">
+                                <rect key="frame" x="47" y="0.0" width="281" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Mj-wq-26W">
+                                <rect key="frame" x="0.0" y="60" width="375" height="610"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="QgK-p4-4JT" id="YvJ-VR-h3B"/>
+                                    <outlet property="delegate" destination="QgK-p4-4JT" id="co4-Ai-fEb"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SnK-Ad-9Qd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0ws-rw-KfK" firstAttribute="centerX" secondItem="Amc-6B-PHy" secondAttribute="centerX" id="9Dy-o0-t29"/>
+                            <constraint firstItem="0ws-rw-KfK" firstAttribute="bottom" secondItem="Amc-6B-PHy" secondAttribute="bottom" id="Kcw-Cu-QPi"/>
+                            <constraint firstItem="Amc-6B-PHy" firstAttribute="leading" secondItem="SnK-Ad-9Qd" secondAttribute="leading" constant="47" id="NKO-Yn-W4A"/>
+                            <constraint firstItem="0ws-rw-KfK" firstAttribute="leading" secondItem="Gj2-Sd-0M7" secondAttribute="leading" id="SnX-qf-rt9"/>
+                            <constraint firstItem="0ws-rw-KfK" firstAttribute="trailing" secondItem="0Mj-wq-26W" secondAttribute="trailing" id="VaI-sL-3cT"/>
+                            <constraint firstItem="0ws-rw-KfK" firstAttribute="leading" secondItem="0Mj-wq-26W" secondAttribute="leading" id="aVQ-1Y-Bph"/>
+                            <constraint firstItem="0ws-rw-KfK" firstAttribute="bottom" secondItem="0Mj-wq-26W" secondAttribute="top" id="aoQ-In-tyH"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="0Mj-wq-26W" secondAttribute="bottom" constant="-3" id="cAG-Xx-zvW"/>
+                            <constraint firstAttribute="trailing" secondItem="0ws-rw-KfK" secondAttribute="trailing" id="dcS-0F-iws"/>
+                            <constraint firstItem="0ws-rw-KfK" firstAttribute="top" secondItem="Amc-6B-PHy" secondAttribute="top" id="hsL-mj-27L"/>
+                            <constraint firstItem="0ws-rw-KfK" firstAttribute="top" secondItem="SnK-Ad-9Qd" secondAttribute="top" id="rhg-hE-NZm"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oel-jg-rQc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="813.60000000000002" y="98.50074962518741"/>
+        </scene>
         <!--About View Controller-->
         <scene sceneID="q4N-vN-BEo">
             <objects>
-                <viewController id="mVN-RS-QFY" customClass="AboutViewController" customModule="garbageSort" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="mVN-RS-QFY" customClass="AboutViewController" customModule="garbageSort" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="71X-Bu-Meo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J2F-kT-FfK">
@@ -418,13 +491,13 @@
         <!--Scan View Controller-->
         <scene sceneID="0MS-Kp-JIN">
             <objects>
-                <viewController storyboardIdentifier="scan" id="IJD-Vk-vwn" customClass="ScanViewController" customModule="garbageSort" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="scan" modalPresentationStyle="fullScreen" id="IJD-Vk-vwn" customClass="ScanViewController" customModule="garbageSort" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Ab-p2-uxc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="195"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HNs-FN-b8C">
-                                <rect key="frame" x="-3" y="98" width="375" height="213"/>
+                                <rect key="frame" x="0.0" y="91" width="375" height="220"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mvU-xG-puL">
@@ -459,18 +532,6 @@
                                     <segue destination="KO2-HW-JAw" kind="presentation" identifier="image" id="aag-8M-Npb"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Qoy-ax-7qe">
-                                <rect key="frame" x="0.0" y="59" width="375" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
-                                    <segment title="Third"/>
-                                </segments>
-                                <connections>
-                                    <action selector="resultChanged:" destination="IJD-Vk-vwn" eventType="valueChanged" id="ghH-5g-dEU"/>
-                                </connections>
-                            </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpc-6b-ynI">
                                 <rect key="frame" x="0.0" y="368" width="372" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -485,6 +546,18 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Qoy-ax-7qe">
+                                <rect key="frame" x="0.0" y="52" width="375" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title="Third"/>
+                                </segments>
+                                <connections>
+                                    <action selector="resultChanged:" destination="IJD-Vk-vwn" eventType="valueChanged" id="ghH-5g-dEU"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Iil-to-sna"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -506,9 +579,9 @@
         <!--Map Kit Controller-->
         <scene sceneID="iis-3b-Psx">
             <objects>
-                <viewController id="0DE-by-eDL" customClass="MapKitController" customModule="garbageSort" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="0DE-by-eDL" customClass="MapKitController" customModule="garbageSort" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U9z-dB-1do">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EFl-8O-pxk">
@@ -525,7 +598,7 @@
                                 </items>
                             </navigationBar>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="k3f-Ii-vAq">
-                                <rect key="frame" x="0.0" y="56" width="375" height="591"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                         </subviews>
@@ -539,14 +612,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tIy-mu-FzW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="SAi-uW-R7M" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1609" y="824"/>
+            <point key="canvasLocation" x="1608.8" y="823.53823088455783"/>
         </scene>
         <!--Analysis View Controller-->
         <scene sceneID="UjW-Mu-igu">
             <objects>
-                <viewController id="KO2-HW-JAw" customClass="AnalysisViewController" customModule="garbageSort" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="KO2-HW-JAw" customClass="AnalysisViewController" customModule="garbageSort" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I9J-Gd-4bH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s1G-1N-FRq">
@@ -577,7 +650,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xgf-dm-Cng">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="195"/>
+                                <rect key="frame" x="0.0" y="440" width="375" height="227"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="thr-Qm-b2c" kind="embed" identifier="ToClildVC" id="YMS-3u-I45"/>
@@ -593,18 +666,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7na-pd-b6h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="869.60000000000002" y="822.63868065967017"/>
+            <point key="canvasLocation" x="869.60000000000002" y="821.73913043478262"/>
         </scene>
         <!--Rkit View Controller-->
         <scene sceneID="Qbc-d5-Fob">
             <objects>
-                <viewController id="sgT-of-qeU" customClass="ARkitViewController" customModule="garbageSort" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="sgT-of-qeU" customClass="ARkitViewController" customModule="garbageSort" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rVe-9I-xaV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sRD-po-tft" customClass="ARSCNView">
-                                <rect key="frame" x="0.0" y="57" width="375" height="610"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </sceneKitView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jl7-Ga-tEB">
@@ -631,14 +704,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GGS-HA-Ijs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="VJ1-mP-88t" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1609" y="99"/>
+            <point key="canvasLocation" x="2548" y="98.50074962518741"/>
         </scene>
         <!--Child View Controller-->
         <scene sceneID="tsf-aD-zEx">
             <objects>
                 <viewController id="thr-Qm-b2c" customClass="ChildViewController" customModule="garbageSort" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dQ5-O1-FZ8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="195"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="227"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Is it edible?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Khc-Wc-dn7">
@@ -683,8 +756,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="YMS-3u-I45"/>
-        <segue reference="ISe-YN-tvl"/>
+        <segue reference="An3-DF-5la"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="ZeroW.jpeg" width="526" height="178"/>
@@ -693,6 +765,9 @@
         <image name="crab.png" width="576" height="576"/>
         <image name="elephant.png" width="347" height="344"/>
         <image name="lion.png" width="576" height="576"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
