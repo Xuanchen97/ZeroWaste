@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+/*
 import UIKit
 import FirebaseStorage
 
@@ -34,7 +34,7 @@ class FirebaseStorageManager {
         }
     }
 }
-
+*/
 /* UPLOADING IMAGE TO FIREBASE SAMPLE CODE
   
  if let data = image.pngData() { // convert your UIImage into Data object using png representation
