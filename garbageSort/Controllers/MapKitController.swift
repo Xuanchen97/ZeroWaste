@@ -20,7 +20,7 @@ class MapKitController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureLocationServices()
-        // Do any additional setup after loading the view.
+        mapview.showsUserLocation = true        // Do any additional setup after loading the view.
     }
     
     //function to update location and allow for location access
@@ -129,12 +129,12 @@ class MapKitController: UIViewController, CLLocationManagerDelegate {
 
         var pinView = mapview.dequeueReusableAnnotationView(withIdentifier: reuseId)
             if pinView == nil {
-                let pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-                pinView.canShowCallout = true
-                pinView.pinTintColor = UIColor.green
+                let pin = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+                pin.canShowCallout = true
+                pin.pinTintColor = UIColor.green
 
                 //next line sets a button for the right side of the callout...
-                pinView.rightCalloutAccessoryView = UIButton(type: .detailDisclosure) as! UIButton
+                pin.rightCalloutAccessoryView = UIButton(type: .detailDisclosure) as! UIButton
             }
             else {
                 pinView!.annotation = annotation
