@@ -8,8 +8,9 @@
 
 import UIKit
 import MapKit
+import Contacts
 
-class MapKitController: UIViewController, CLLocationManagerDelegate {
+class MapKitController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
     private let locationManager = CLLocationManager()
     private var currentLocation = CLLocationCoordinate2D()
@@ -20,7 +21,12 @@ class MapKitController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureLocationServices()
-        mapview.showsUserLocation = true        // Do any additional setup after loading the view.
+        mapview.showsUserLocation = true
+        mapview.delegate = self
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
+        // Do any additional s  etup after loading the view.
     }
     
     //function to update location and allow for location access
@@ -61,6 +67,12 @@ class MapKitController: UIViewController, CLLocationManagerDelegate {
         HeartlakeAnnotation.title = "Heart Lake Community Recycling Centre"
         HeartlakeAnnotation.coordinate = CLLocationCoordinate2D(latitude: 43.710606, longitude: -79.801796)
         
+        let HeartLakeCoordinate = CLLocationCoordinate2D(latitude: 43.710606, longitude: -79.801796)
+        
+        let HeartLakeAddress = [CNPostalAddressStreetKey: "420 Railside Dr", CNPostalAddressCityKey: "Brampton", CNPostalAddressPostalCodeKey: "L7A 0N8", CNPostalAddressISOCountryCodeKey: "CA"]
+        let HeartLakeWaste = MKPlacemark(coordinate: HeartLakeCoordinate, addressDictionary: HeartLakeAddress)
+
+        
         let BattlefordAnnotation = MKPointAnnotation()
         BattlefordAnnotation.title = "Battleford Community Recycling Centre"
         BattlefordAnnotation.coordinate = CLLocationCoordinate2D(latitude: 43.583734, longitude: 79.739060)
@@ -80,47 +92,22 @@ class MapKitController: UIViewController, CLLocationManagerDelegate {
         
         
         
-        desinations.append(HeartlakeAnnotation)
+        //desinations.append(HeartlakeAnnotation)
         desinations.append(simsRecycleAnnotation)
         desinations.append(BattlefordAnnotation)
         desinations.append(PeelScrapAnnotation)
         desinations.append(HaltonWasteAnnotation)
 
         
-        mapview.addAnnotation(HeartlakeAnnotation)
+        //mapview.addAnnotation(HeartlakeAnnotation)
         mapview.addAnnotation(simsRecycleAnnotation)
         mapview.addAnnotation(BattlefordAnnotation)
         mapview.addAnnotation(PeelScrapAnnotation)
         mapview.addAnnotation(HaltonWasteAnnotation)
+        
+        mapview.addAnnotation(HeartLakeWaste)
 
     }
-    
-    /* //function to create route between location and annotated location
-    private func constructRoute(userLocation: CLLocationCoordinate2D){
-        let directionsRequest = MKDirections.Request()
-        directionsRequest.source = MKMapItem(placemark: MKPlacemark(coordinate: userLocation))
-        directionsRequest.destination = MKMapItem(placemark: MKPlacemark(coordinate: desinations[0].coordinate))
-        directionsRequest.requestsAlternateRoutes = true
-        directionsRequest.transportType = .automobile
-        
-        let directions = MKDirections(request: directionsRequest)
-        directions.calculate { [weak self] (directionsResponse, error) in
-            guard let strongSelf = self else { return }
-            
-            if let error = error {
-                print(error.localizedDescription)
-            } else if let response = directionsResponse, response.routes.count > 0 {
-                strongSelf.currentRoute = response.routes[0]
-                strongSelf.mapview.addOverlay(response.routes[0].polyline)
-                strongSelf.mapview.setVisibleMapRect(response.routes[0].polyline.boundingMapRect, animated: true)
-            }
-        }
-    }
- */
-    
-    
-    
-    
     //function to make route between locations
     func mapview(mapview: MKMapView!, viewForAnnotation annotation: MKPointAnnotation!) -> MKAnnotationView?{
         guard annotation is MKPointAnnotation else { return nil }
@@ -130,7 +117,7 @@ class MapKitController: UIViewController, CLLocationManagerDelegate {
         var pinView = mapview.dequeueReusableAnnotationView(withIdentifier: reuseId)
             if pinView == nil {
                 let pin = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-                pin.canShowCallout = true
+                pin.canShowCallout = false
                 pin.pinTintColor = UIColor.green
 
                 //next line sets a button for the right side of the callout...
@@ -144,14 +131,14 @@ class MapKitController: UIViewController, CLLocationManagerDelegate {
         
     }
     // function to give directions when selecting annotation
-    func mapView(mapView: MKMapView!, annotationView view: MKAnnotationView!,
-        calloutAccessoryControlTapped control: UIControl!) {
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
 
-            let selectedLoc = view.annotation
+        let selectedLoc = view.annotation
 
         print("Annotation '\(selectedLoc?.title!)' has been selected")
 
         let currentLocMapItem = MKMapItem.forCurrentLocation()
+
 
         
         let selectedPlacemark = MKPlacemark(coordinate: selectedLoc!.coordinate, addressDictionary: nil)
@@ -187,23 +174,3 @@ class MapKitController: UIViewController, CLLocationManagerDelegate {
     }
 
 }
-
-/*
-extension ViewController: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print("Did get latest location")
-        
-        var currentLocation = CLLocationCoordinate2D()
-        
-        guard let latestLocation = locations.first else {return}
-        if(currentLocation == nil) {
-        
-        }
-        currentLocation = latestLocation.coordinate
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        print("The status has changed")
-    }
-}
-*/
