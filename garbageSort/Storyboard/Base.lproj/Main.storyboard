@@ -3,7 +3,7 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -338,7 +338,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan your garbage now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sp-Od-QYk">
-                                <rect key="frame" x="75" y="430" width="224" height="27"/>
+                                <rect key="frame" x="75.5" y="430.5" width="224" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -408,21 +408,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ws-rw-KfK">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="HNF-U3-kXa"/>
-                                </constraints>
-                                <items>
-                                    <navigationItem id="205-Lz-CtE">
-                                        <barButtonItem key="leftBarButtonItem" title="&lt;-" id="mm7-aH-l7c"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <searchBar contentMode="redraw" misplaced="YES" searchBarStyle="minimal" placeholder="Please enter your postal code" translatesAutoresizingMaskIntoConstraints="NO" id="Amc-6B-PHy">
-                                <rect key="frame" x="47" y="0.0" width="281" height="44"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Mj-wq-26W">
                                 <rect key="frame" x="0.0" y="60" width="375" height="610"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -432,25 +417,52 @@
                                     <outlet property="delegate" destination="QgK-p4-4JT" id="co4-Ai-fEb"/>
                                 </connections>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ws-rw-KfK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="HNF-U3-kXa"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem id="205-Lz-CtE">
+                                        <nil key="title"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="mm7-aH-l7c">
+                                            <connections>
+                                                <segue destination="yNz-l1-rjP" kind="unwind" unwindAction="unwindToHomeVCWithSender:" id="L6E-lF-YL1"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <textField key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="WW3-vA-cYn">
+                                            <rect key="frame" x="79" y="5" width="217" height="34"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <barButtonItem key="rightBarButtonItem" title="Search" id="Sfe-hw-Xx7">
+                                            <connections>
+                                                <action selector="search:" destination="QgK-p4-4JT" id="vtv-M9-HFL"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SnK-Ad-9Qd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="0ws-rw-KfK" firstAttribute="centerX" secondItem="Amc-6B-PHy" secondAttribute="centerX" id="9Dy-o0-t29"/>
-                            <constraint firstItem="0ws-rw-KfK" firstAttribute="bottom" secondItem="Amc-6B-PHy" secondAttribute="bottom" id="Kcw-Cu-QPi"/>
-                            <constraint firstItem="Amc-6B-PHy" firstAttribute="leading" secondItem="SnK-Ad-9Qd" secondAttribute="leading" constant="47" id="NKO-Yn-W4A"/>
                             <constraint firstItem="0ws-rw-KfK" firstAttribute="leading" secondItem="Gj2-Sd-0M7" secondAttribute="leading" id="SnX-qf-rt9"/>
                             <constraint firstItem="0ws-rw-KfK" firstAttribute="trailing" secondItem="0Mj-wq-26W" secondAttribute="trailing" id="VaI-sL-3cT"/>
                             <constraint firstItem="0ws-rw-KfK" firstAttribute="leading" secondItem="0Mj-wq-26W" secondAttribute="leading" id="aVQ-1Y-Bph"/>
                             <constraint firstItem="0ws-rw-KfK" firstAttribute="bottom" secondItem="0Mj-wq-26W" secondAttribute="top" id="aoQ-In-tyH"/>
                             <constraint firstAttribute="bottomMargin" secondItem="0Mj-wq-26W" secondAttribute="bottom" constant="-3" id="cAG-Xx-zvW"/>
                             <constraint firstAttribute="trailing" secondItem="0ws-rw-KfK" secondAttribute="trailing" id="dcS-0F-iws"/>
-                            <constraint firstItem="0ws-rw-KfK" firstAttribute="top" secondItem="Amc-6B-PHy" secondAttribute="top" id="hsL-mj-27L"/>
                             <constraint firstItem="0ws-rw-KfK" firstAttribute="top" secondItem="SnK-Ad-9Qd" secondAttribute="top" id="rhg-hE-NZm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="postalCodeTextField" destination="WW3-vA-cYn" id="xEi-Pt-WG6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oel-jg-rQc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="yNz-l1-rjP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="813.60000000000002" y="98.50074962518741"/>
         </scene>

@@ -13,4 +13,5 @@ pod 'SDWebImage'
 pod 'Firebase/Analytics' 
 pod 'Firebase/Firestore'
 pod 'DropDown'
+pod 'Firebase/Storage'
 end
