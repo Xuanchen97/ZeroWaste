@@ -95,7 +95,7 @@ class MapKitController: UIViewController, CLLocationManagerDelegate {
 
     }
     
-    //function to create route between location and annotated location
+    /* //function to create route between location and annotated location
     private func constructRoute(userLocation: CLLocationCoordinate2D){
         let directionsRequest = MKDirections.Request()
         directionsRequest.source = MKMapItem(placemark: MKPlacemark(coordinate: userLocation))
@@ -116,20 +116,50 @@ class MapKitController: UIViewController, CLLocationManagerDelegate {
             }
         }
     }
+ */
     
     
     //function to make route between locations
-    func mapview(_ mapview: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer
-    {
-        guard let currentRoute = currentRoute else {
-            return MKOverlayRenderer()
-        }
+    func mapview(mapview: MKMapView!, viewForAnnotation annotation: MKPointAnnotation!) -> MKMapView {
+        if annotation is MKUserLocation {
+                return nil
+            }
+
+            let reuseId = "pin"
+
+            var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
+            if pinView == nil {
+                pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+                pinView!.canShowCallout = true
+                pinView!.pinColor = .Purple
+
+                //next line sets a button for the right side of the callout...
+                pinView!.rightCalloutAccessoryView = UIButton.buttonWithType(.DetailDisclosure) as! UIButton
+            }
+            else {
+                pinView!.annotation = annotation
+            }
+
+            return pinView
         
-        let polyLineRenderer = MKPolylineRenderer(polyline: currentRoute.polyline)
-        polyLineRenderer.strokeColor = UIColor.green
-        polyLineRenderer.lineWidth = 5
-        
-        return polyLineRenderer
+    }
+    func mapView(mapView: MKMapView!, annotationView view: MKAnnotationView!,
+        calloutAccessoryControlTapped control: UIControl!) {
+
+            let selectedLoc = view.annotation
+
+            println("Annotation '\(selectedLoc.title!)' has been selected")
+
+            let currentLocMapItem = MKMapItem.mapItemForCurrentLocation()
+
+            let selectedPlacemark = MKPlacemark(coordinate: selectedLoc.coordinate, addressDictionary: nil)
+            let selectedMapItem = MKMapItem(placemark: selectedPlacemark)
+
+            let mapItems = [selectedMapItem, currentLocMapItem]
+
+            let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+
+            MKMapItem.openMapsWithItems(mapItems, launchOptions:launchOptions)
     }
     
     //checking for location updates
