@@ -119,6 +119,8 @@ class MapKitController: UIViewController, CLLocationManagerDelegate {
  */
     
     
+    
+    
     //function to make route between locations
     func mapview(mapview: MKMapView!, viewForAnnotation annotation: MKPointAnnotation!) -> MKAnnotationView?{
         guard annotation is MKPointAnnotation else { return nil }
@@ -151,11 +153,12 @@ class MapKitController: UIViewController, CLLocationManagerDelegate {
 
         let currentLocMapItem = MKMapItem.forCurrentLocation()
 
+        
         let selectedPlacemark = MKPlacemark(coordinate: selectedLoc!.coordinate, addressDictionary: nil)
             let selectedMapItem = MKMapItem(placemark: selectedPlacemark)
 
             let mapItems = [selectedMapItem, currentLocMapItem]
-
+        
             let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
 
         MKMapItem.openMaps(with: mapItems, launchOptions:launchOptions)
@@ -177,6 +180,7 @@ class MapKitController: UIViewController, CLLocationManagerDelegate {
     //checking if location services have been authorized
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         print("The status has changed")
+        addAnnotations()
         if (status == .authorizedAlways || status == .authorizedWhenInUse) {
             beginLocationUpdates(locationManager: manager)
         }
