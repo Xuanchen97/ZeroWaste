@@ -3,7 +3,7 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -363,7 +363,7 @@
                                                 </connections>
                                             </button>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Item" id="G0Z-fb-Pmu">
+                                        <barButtonItem key="rightBarButtonItem" title="Search" id="G0Z-fb-Pmu">
                                             <connections>
                                                 <segue destination="QgK-p4-4JT" kind="presentation" id="yfe-ea-JeT"/>
                                             </connections>
@@ -474,23 +474,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J2F-kT-FfK">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2F-kT-FfK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="v4E-2h-fVA"/>
+                                </constraints>
                                 <items>
                                     <navigationItem title="About" id="F8u-6U-WrC">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="oYT-Yn-CcR"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0g8-Vg-snx">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0g8-Vg-snx">
+                                <rect key="frame" x="0.0" y="45" width="375" height="622"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FSB-3l-PBM"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="J2F-kT-FfK" firstAttribute="trailing" secondItem="0g8-Vg-snx" secondAttribute="trailing" id="5QU-aJ-kVE"/>
+                            <constraint firstItem="J2F-kT-FfK" firstAttribute="centerX" secondItem="71X-Bu-Meo" secondAttribute="centerX" id="7Bg-o3-r1p"/>
+                            <constraint firstItem="J2F-kT-FfK" firstAttribute="leading" secondItem="0g8-Vg-snx" secondAttribute="leading" id="8Q2-IX-Nt7"/>
+                            <constraint firstItem="0g8-Vg-snx" firstAttribute="top" secondItem="J2F-kT-FfK" secondAttribute="bottom" id="Z0r-BA-bBb"/>
+                            <constraint firstItem="J2F-kT-FfK" firstAttribute="leading" secondItem="FSB-3l-PBM" secondAttribute="leading" id="avK-rE-Knd"/>
+                            <constraint firstItem="0g8-Vg-snx" firstAttribute="bottom" secondItem="FSB-3l-PBM" secondAttribute="bottom" id="eFV-fH-QuS"/>
+                            <constraint firstItem="J2F-kT-FfK" firstAttribute="top" secondItem="FSB-3l-PBM" secondAttribute="top" id="pNr-qM-X7Z"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="wbPage" destination="0g8-Vg-snx" id="Crn-ag-aQs"/>
@@ -596,9 +606,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EFl-8O-pxk">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EFl-8O-pxk">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Jno-Fq-HA5"/>
+                                </constraints>
                                 <items>
                                     <navigationItem title="Map" id="tJV-Ph-9W5">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="02p-aY-ml4">
@@ -609,13 +621,21 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="k3f-Ii-vAq">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="k3f-Ii-vAq">
+                                <rect key="frame" x="0.0" y="45" width="375" height="622"/>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GId-HD-uYd"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EFl-8O-pxk" firstAttribute="trailing" secondItem="k3f-Ii-vAq" secondAttribute="trailing" id="Fbf-LS-qNo"/>
+                            <constraint firstItem="k3f-Ii-vAq" firstAttribute="top" secondItem="EFl-8O-pxk" secondAttribute="bottom" id="Sd1-yd-0em"/>
+                            <constraint firstItem="k3f-Ii-vAq" firstAttribute="bottom" secondItem="GId-HD-uYd" secondAttribute="bottom" id="iIs-jd-NkT"/>
+                            <constraint firstItem="EFl-8O-pxk" firstAttribute="leading" secondItem="GId-HD-uYd" secondAttribute="leading" id="isU-ld-fFD"/>
+                            <constraint firstItem="EFl-8O-pxk" firstAttribute="top" secondItem="GId-HD-uYd" secondAttribute="top" id="otp-wb-fqL"/>
+                            <constraint firstItem="EFl-8O-pxk" firstAttribute="leading" secondItem="k3f-Ii-vAq" secondAttribute="leading" id="qYj-yA-2tX"/>
+                            <constraint firstItem="EFl-8O-pxk" firstAttribute="centerX" secondItem="U9z-dB-1do" secondAttribute="centerX" id="xcm-IN-TRt"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="mapview" destination="k3f-Ii-vAq" id="CaH-bN-lv9"/>
@@ -688,13 +708,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sRD-po-tft" customClass="ARSCNView">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sRD-po-tft" customClass="ARSCNView">
+                                <rect key="frame" x="0.0" y="45" width="375" height="622"/>
                             </sceneKitView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jl7-Ga-tEB">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jl7-Ga-tEB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="9av-Vl-CHF"/>
+                                </constraints>
                                 <items>
                                     <navigationItem title="ARKit" id="ayq-gL-Fpu">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="elE-Hq-N3b">
@@ -708,6 +729,15 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Hsw-lP-u9s"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sRD-po-tft" firstAttribute="top" secondItem="jl7-Ga-tEB" secondAttribute="bottom" id="2KZ-2g-Ubh"/>
+                            <constraint firstItem="jl7-Ga-tEB" firstAttribute="leading" secondItem="Hsw-lP-u9s" secondAttribute="leading" id="3ly-67-i76"/>
+                            <constraint firstItem="sRD-po-tft" firstAttribute="bottom" secondItem="Hsw-lP-u9s" secondAttribute="bottom" id="52O-nG-Cte"/>
+                            <constraint firstItem="jl7-Ga-tEB" firstAttribute="centerX" secondItem="rVe-9I-xaV" secondAttribute="centerX" id="E6z-Ks-e82"/>
+                            <constraint firstItem="jl7-Ga-tEB" firstAttribute="top" secondItem="Hsw-lP-u9s" secondAttribute="top" id="MfM-vg-K9c"/>
+                            <constraint firstItem="jl7-Ga-tEB" firstAttribute="leading" secondItem="sRD-po-tft" secondAttribute="leading" id="cKv-oq-zay"/>
+                            <constraint firstItem="jl7-Ga-tEB" firstAttribute="trailing" secondItem="sRD-po-tft" secondAttribute="trailing" id="rqT-i0-H5p"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="sceneView" destination="sRD-po-tft" id="rMG-VX-pff"/>
