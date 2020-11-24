@@ -419,10 +419,6 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <searchBar contentMode="redraw" misplaced="YES" searchBarStyle="minimal" placeholder="Please enter your postal code" translatesAutoresizingMaskIntoConstraints="NO" id="Amc-6B-PHy">
-                                <rect key="frame" x="47" y="0.0" width="281" height="44"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Mj-wq-26W">
                                 <rect key="frame" x="0.0" y="60" width="375" height="610"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -432,6 +428,10 @@
                                     <outlet property="delegate" destination="QgK-p4-4JT" id="co4-Ai-fEb"/>
                                 </connections>
                             </tableView>
+                            <searchBar contentMode="redraw" misplaced="YES" searchBarStyle="minimal" placeholder="Please enter your postal code" translatesAutoresizingMaskIntoConstraints="NO" id="Amc-6B-PHy">
+                                <rect key="frame" x="47" y="0.0" width="281" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SnK-Ad-9Qd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
