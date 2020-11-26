@@ -24,7 +24,7 @@ class SearchViewController: UIViewController, UITableViewDataSource,
     var sectionData: [Int: [String]] = [:]
     var selectedIndex = -1
     var isExpanded = false
-    
+    var currentLoc = ""
     var postalCode = ""
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -5,7 +5,6 @@
 //  Created by Saam Haghighat on 2020-04-13.
 //  Copyright © 2020 Saam Haghighat. All rights reserved.
 //
-
 import UIKit
 import MapKit
 
@@ -119,22 +118,22 @@ class MapKitController: UIViewController, CLLocationManagerDelegate {
  */
     
     
+    
+    
     //function to make route between locations
-    func mapview(mapview: MKMapView!, viewForAnnotation annotation: MKPointAnnotation!) -> MKMapView {
-        if annotation is MKUserLocation {
-                return nil
-            }
+    func mapview(mapview: MKMapView!, viewForAnnotation annotation: MKPointAnnotation!) -> MKAnnotationView?{
+        guard annotation is MKPointAnnotation else { return nil }
 
-            let reuseId = "pin"
+        let reuseId = "pin"
 
-            var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
+        var pinView = mapview.dequeueReusableAnnotationView(withIdentifier: reuseId)
             if pinView == nil {
-                pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-                pinView!.canShowCallout = true
-                pinView!.pinColor = .Purple
+                let pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+                pinView.canShowCallout = true
+                pinView.pinTintColor = UIColor.green
 
                 //next line sets a button for the right side of the callout...
-                pinView!.rightCalloutAccessoryView = UIButton.buttonWithType(.DetailDisclosure) as! UIButton
+                pinView.rightCalloutAccessoryView = UIButton(type: .detailDisclosure) as! UIButton
             }
             else {
                 pinView!.annotation = annotation
@@ -143,23 +142,25 @@ class MapKitController: UIViewController, CLLocationManagerDelegate {
             return pinView
         
     }
+    // function to give directions when selecting annotation
     func mapView(mapView: MKMapView!, annotationView view: MKAnnotationView!,
         calloutAccessoryControlTapped control: UIControl!) {
 
             let selectedLoc = view.annotation
 
-            println("Annotation '\(selectedLoc.title!)' has been selected")
+        print("Annotation '\(selectedLoc?.title!)' has been selected")
 
-            let currentLocMapItem = MKMapItem.mapItemForCurrentLocation()
+        let currentLocMapItem = MKMapItem.forCurrentLocation()
 
-            let selectedPlacemark = MKPlacemark(coordinate: selectedLoc.coordinate, addressDictionary: nil)
+        
+        let selectedPlacemark = MKPlacemark(coordinate: selectedLoc!.coordinate, addressDictionary: nil)
             let selectedMapItem = MKMapItem(placemark: selectedPlacemark)
 
             let mapItems = [selectedMapItem, currentLocMapItem]
-
+        
             let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
 
-            MKMapItem.openMapsWithItems(mapItems, launchOptions:launchOptions)
+        MKMapItem.openMaps(with: mapItems, launchOptions:launchOptions)
     }
     
     //checking for location updates
@@ -178,6 +179,7 @@ class MapKitController: UIViewController, CLLocationManagerDelegate {
     //checking if location services have been authorized
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         print("The status has changed")
+        addAnnotations()
         if (status == .authorizedAlways || status == .authorizedWhenInUse) {
             beginLocationUpdates(locationManager: manager)
         }
