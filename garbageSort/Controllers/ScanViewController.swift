@@ -37,7 +37,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     
     @IBOutlet weak var ResultPercentage: UILabel!
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var lblcorrectionResult: UILabel!
     @IBOutlet weak var lblScanResault: UILabel!
     @IBOutlet weak var Ntitle: UINavigationItem?
     @IBOutlet var imgScanResult: UIImageView!
@@ -61,9 +61,12 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         if mainDelegate.CIImage != nil{
             detect(garbageImage: mainDelegate.CIImage)
             imageView.image = mainDelegate.userPickedImage
-            self.Ntitle?.title = mainDelegate.gn
+            //self.Ntitle?.title = mainDelegate.gn
             self.ScanedItem = mainDelegate.gn
+            self.segmentedControl.isHidden = true
             self.ResultPercentage.isHidden = true
+            self.lblcorrectionResult.isHidden = false
+            self.lblcorrectionResult.text = "Corrected Result - \(mainDelegate.gn!)"
             self.readDisposalRules(ScanedItem: self.ScanedItem)
         }
     }
@@ -102,7 +105,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             }
             //the string describes what the classification is
             self.garbageName = result1.identifier.capitalized
-            self.Ntitle?.title = self.garbageName
+            //self.Ntitle?.title = self.garbageName
             self.ScanedItem = self.garbageName!
         
             
@@ -114,7 +117,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             //read data from the disposal rule database
             self.readDisposalRules(ScanedItem: self.result1)
             
-            self.Ntitle?.title = self.result1
+            //self.Ntitle?.title = self.result1
             self.ResultPercentage.isHidden = false
             self.ResultPercentage.text = self.result1Percentage
             
@@ -134,6 +137,10 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             self.result3Percentage = String(format: "%.2f", result3.confidence*100)+"%"
 
             self.segmentedControl.isHidden = false
+            self.lblcorrectionResult.isHidden = true
+            self.segmentedControl.setTitle(self.result1, forSegmentAt: 0)
+            self.segmentedControl.setTitle(self.result2, forSegmentAt: 1)
+            self.segmentedControl.setTitle(self.result3, forSegmentAt: 2)
          
         }
         let handler = VNImageRequestHandler(ciImage: garbageImage)
@@ -181,25 +188,21 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         switch segmentedControl.selectedSegmentIndex
         {
         case 0:
-            self.Ntitle?.title = self.result1
+            //self.Ntitle?.title = self.result1
             self.ResultPercentage.text = self.result1Percentage
             self.readDisposalRules(ScanedItem: self.result1)
         case 1:
-            self.Ntitle?.title = self.result2
+            //self.Ntitle?.title = self.result2
             self.ResultPercentage.text = self.result2Percentage
             self.readDisposalRules(ScanedItem: self.result2)
         case 2:
-            self.Ntitle?.title = self.result3
+            //self.Ntitle?.title = self.result3
             self.ResultPercentage.text = self.result3Percentage
             self.readDisposalRules(ScanedItem: self.result3)
         default:
             break
         }
     }
-    
-    
-  
-    
     
     @IBAction func cameraTapped(_ sender: UIBarButtonItem) {
          present(imagePicker, animated: true, completion: nil)
