@@ -481,7 +481,11 @@
                                 </constraints>
                                 <items>
                                     <navigationItem title="About" id="F8u-6U-WrC">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="oYT-Yn-CcR"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="oYT-Yn-CcR">
+                                            <connections>
+                                                <segue destination="GXS-z7-y4A" kind="unwind" unwindAction="unwindToHomeVCWithSender:" id="b9B-pL-rWW"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -507,6 +511,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qey-J1-xvc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="GXS-z7-y4A" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-706.39999999999998" y="823.53823088455783"/>
         </scene>
@@ -518,8 +523,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HNs-FN-b8C">
-                                <rect key="frame" x="0.0" y="91" width="375" height="220"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="scanpage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="mI6-7R-zMX">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mvU-xG-puL">
@@ -540,6 +545,10 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HNs-FN-b8C">
+                                <rect key="frame" x="0.0" y="91" width="375" height="220"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cx5-Z9-he9">
                                 <rect key="frame" x="107" y="409" width="162" height="187"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -595,6 +604,7 @@
                         <outlet property="Ntitle" destination="Ggi-Cz-vWc" id="IU9-Mh-3xd"/>
                         <outlet property="ResultPercentage" destination="xpc-6b-ynI" id="9UT-aU-K7R"/>
                         <outlet property="imageView" destination="HNs-FN-b8C" id="fob-zx-Vs7"/>
+                        <outlet property="imgScanBackground" destination="mI6-7R-zMX" id="KCN-HP-G3i"/>
                         <outlet property="imgScanResult" destination="cx5-Z9-he9" id="rYJ-bq-V21"/>
                         <outlet property="lblScanResault" destination="hUi-UO-65e" id="NJ2-pq-eJP"/>
                         <outlet property="lblcorrectionResult" destination="udN-S8-7BW" id="Ccq-UI-aJa"/>
@@ -815,6 +825,7 @@
         <image name="crab.png" width="576" height="576"/>
         <image name="elephant.png" width="347" height="344"/>
         <image name="lion.png" width="576" height="576"/>
+        <image name="scanpage.jpg" width="960" height="1440"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

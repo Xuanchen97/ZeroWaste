@@ -41,6 +41,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var lblScanResault: UILabel!
     @IBOutlet weak var Ntitle: UINavigationItem?
     @IBOutlet var imgScanResult: UIImageView!
+    @IBOutlet var imgScanBackground: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
     let imagePicker = UIImagePickerController()
     @IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -53,7 +54,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         imagePicker.delegate = self
         imagePicker.sourceType = .camera
         imagePicker.allowsEditing = true
-        
+        self.imgScanBackground.isHidden = false
         self.Region = mainDelegate.region
         segmentedControl.isHidden = true
         print("Selected region: \(self.Region)")
@@ -66,6 +67,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             self.segmentedControl.isHidden = true
             self.ResultPercentage.isHidden = true
             self.lblcorrectionResult.isHidden = false
+            self.imgScanBackground.isHidden = true
             self.lblcorrectionResult.text = "Corrected Result - \(mainDelegate.gn!)"
             self.readDisposalRules(ScanedItem: self.ScanedItem)
         }
@@ -120,6 +122,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             //self.Ntitle?.title = self.result1
             self.ResultPercentage.isHidden = false
             self.ResultPercentage.text = self.result1Percentage
+            self.imgScanBackground.isHidden = true
             
             guard let result2 = request.results?[1] as? VNClassificationObservation else {
                 fatalError("Could not complete classfication")
