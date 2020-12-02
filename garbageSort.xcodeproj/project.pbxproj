@@ -25,6 +25,7 @@
 		521F1804242ECC400046985E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521F17EE241734B80046985E /* Main.storyboard */; };
 		521F1827242EDE540046985E /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521F1826242EDE540046985E /* ScanViewController.swift */; };
 		524A46A324428C3900D95556 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526B7D7F244262C900D77617 /* TableViewController.swift */; };
+		524CF6B4257702E0007D44BF /* scanpage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 524CF6B3257702E0007D44BF /* scanpage.jpg */; };
 		525DBCEC25323E4600A26E87 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 525DBCEB25323E4600A26E87 /* GoogleService-Info.plist */; };
 		5271A9242442395700D1153B /* SiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5271A9232442395700D1153B /* SiteCell.swift */; };
 		529305052444D64300D5755E /* MapKitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529305042444D64300D5755E /* MapKitController.swift */; };
@@ -65,6 +66,7 @@
 		521F17FC241735280046985E /* Waste and Recycling.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Waste and Recycling.mp4"; sourceTree = "<group>"; };
 		521F17FE242ECA040046985E /* ARkitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARkitViewController.swift; sourceTree = "<group>"; };
 		521F1826242EDE540046985E /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		524CF6B3257702E0007D44BF /* scanpage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scanpage.jpg; sourceTree = "<group>"; };
 		525DBCEB25323E4600A26E87 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		526B7D7F244262C900D77617 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		5271A9232442395700D1153B /* SiteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteCell.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 		521F1803242ECB1C0046985E /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				524CF6B3257702E0007D44BF /* scanpage.jpg */,
 				52CBF06C2550F4090071C26E /* bluebox.jpg */,
 				52CBF0652550F39C0071C26E /* blackbox.png */,
 				52CBF0662550F39C0071C26E /* greenbox.jpg */,
@@ -303,6 +306,7 @@
 				52CBF0682550F39C0071C26E /* blackbox.png in Resources */,
 				521F1804242ECC400046985E /* Main.storyboard in Resources */,
 				52CBF06D2550F4090071C26E /* bluebox.jpg in Resources */,
+				524CF6B4257702E0007D44BF /* scanpage.jpg in Resources */,
 				AEF91AA2244768B700D43A17 /* bgm.mp3 in Resources */,
 				320FC64B252BB85F008373A8 /* camera.png in Resources */,
 				AEEA1D2024423EEA0065E8F4 /* crab.png in Resources */,
