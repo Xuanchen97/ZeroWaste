@@ -464,7 +464,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oel-jg-rQc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="yNz-l1-rjP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="813.60000000000002" y="98.50074962518741"/>
+            <point key="canvasLocation" x="870" y="99"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="q4N-vN-BEo">
@@ -523,7 +523,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="scanpage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="mI6-7R-zMX">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="scanpage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="mI6-7R-zMX">
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mvU-xG-puL">
@@ -557,9 +557,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AEl-nz-nDe">
                                 <rect key="frame" x="122" y="597" width="131" height="30"/>
-                                <state key="normal" title="Report if it's wrong">
-                                    <color key="titleColor" systemColor="systemRedColor"/>
-                                </state>
+                                <state key="normal" title="Report if it's wrong"/>
                                 <connections>
                                     <segue destination="KO2-HW-JAw" kind="presentation" identifier="image" id="aag-8M-Npb"/>
                                 </connections>
@@ -638,6 +636,7 @@
                     <connections>
                         <outlet property="Ntitle" destination="Ggi-Cz-vWc" id="IU9-Mh-3xd"/>
                         <outlet property="ResultPercentage" destination="xpc-6b-ynI" id="9UT-aU-K7R"/>
+                        <outlet property="button" destination="AEl-nz-nDe" id="nFj-gB-tpV"/>
                         <outlet property="imageView" destination="HNs-FN-b8C" id="fob-zx-Vs7"/>
                         <outlet property="imgScanBackground" destination="mI6-7R-zMX" id="KCN-HP-G3i"/>
                         <outlet property="imgScanResult" destination="cx5-Z9-he9" id="rYJ-bq-V21"/>
@@ -816,7 +815,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GGS-HA-Ijs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="VJ1-mP-88t" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2548" y="98.50074962518741"/>
+            <point key="canvasLocation" x="1609" y="99"/>
         </scene>
         <!--Child View Controller-->
         <scene sceneID="tsf-aD-zEx">
@@ -886,9 +885,6 @@
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

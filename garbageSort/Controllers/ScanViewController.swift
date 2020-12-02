@@ -45,6 +45,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var imageView: UIImageView!
     let imagePicker = UIImagePickerController()
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var button : UIButton!
     
     var ScanedItem: String = ""
     let mainDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -71,6 +72,8 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             self.lblcorrectionResult.text = "Corrected Result - \(mainDelegate.gn!)"
             self.readDisposalRules(ScanedItem: self.ScanedItem)
         }
+        button.layer.cornerRadius = 4
+        button.backgroundColor = UIColor.systemBlue
     }
     
     // image Picker dekegate method
