@@ -519,8 +519,8 @@
         <scene sceneID="0MS-Kp-JIN">
             <objects>
                 <viewController storyboardIdentifier="scan" modalPresentationStyle="fullScreen" id="IJD-Vk-vwn" customClass="ScanViewController" customModule="garbageSort" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5Ab-p2-uxc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="5Ab-p2-uxc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="227"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="scanpage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="mI6-7R-zMX">
@@ -552,11 +552,11 @@
                                     <constraint firstAttribute="height" constant="220" id="YMi-u1-riK"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cx5-Z9-he9">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cx5-Z9-he9">
                                 <rect key="frame" x="107" y="409" width="161" height="184"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpc-6b-ynI">
-                                <rect key="frame" x="0.0" y="368" width="372" height="33"/>
+                                <rect key="frame" x="0.0" y="328" width="372" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="rhk-rI-tI5"/>
                                 </constraints>
@@ -590,7 +590,7 @@
                                 <color key="textColor" systemColor="systemPinkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AEl-nz-nDe">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AEl-nz-nDe">
                                 <rect key="frame" x="104" y="600" width="166" height="30"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="17"/>
@@ -706,19 +706,23 @@
         <scene sceneID="UjW-Mu-igu">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="KO2-HW-JAw" customClass="AnalysisViewController" customModule="garbageSort" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="I9J-Gd-4bH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="I9J-Gd-4bH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="227"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1G-1N-FRq">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Answer some questions" id="lLu-U4-blY">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="1XL-Qz-zme"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="1XL-Qz-zme">
+                                            <connections>
+                                                <segue destination="JuW-4U-EqB" kind="unwind" unwindAction="unwindToHomeVCWithSender:" id="W0Y-pD-RPP"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help us to figure this out :)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59e-Vj-I7U">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Help us to figure this out :)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59e-Vj-I7U">
                                 <rect key="frame" x="0.0" y="354" width="375" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="K58-fq-1p6"/>
@@ -727,7 +731,7 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="alp-pZ-E7V">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="alp-pZ-E7V">
                                 <rect key="frame" x="72" y="116" width="231" height="230"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry we cannot recognize this" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNm-MU-Ycr">
@@ -736,7 +740,7 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xgf-dm-Cng">
+                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xgf-dm-Cng">
                                 <rect key="frame" x="0.0" y="440" width="375" height="227"/>
                                 <connections>
                                     <segue destination="thr-Qm-b2c" kind="embed" identifier="ToClildVC" id="YMS-3u-I45"/>
@@ -770,6 +774,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7na-pd-b6h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="JuW-4U-EqB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="869.60000000000002" y="821.73913043478262"/>
         </scene>
@@ -871,7 +876,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="An3-DF-5la"/>
+        <segue reference="YMS-3u-I45"/>
+        <segue reference="ISe-YN-tvl"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="ZeroW.jpeg" width="526" height="178"/>
