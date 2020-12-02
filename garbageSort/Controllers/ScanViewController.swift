@@ -56,6 +56,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         imagePicker.sourceType = .camera
         imagePicker.allowsEditing = true
         self.imgScanBackground.isHidden = false
+        button.isHidden = true
         self.Region = mainDelegate.region
         segmentedControl.isHidden = true
         print("Selected region: \(self.Region)")
@@ -69,7 +70,8 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             self.ResultPercentage.isHidden = true
             self.lblcorrectionResult.isHidden = false
             self.imgScanBackground.isHidden = true
-            self.lblcorrectionResult.text = "Corrected Result - \(mainDelegate.gn!)"
+            button.isHidden = true
+            self.lblcorrectionResult.text = mainDelegate.gn!
             self.readDisposalRules(ScanedItem: self.ScanedItem)
         }
         button.layer.cornerRadius = 4
@@ -143,6 +145,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             self.result3Percentage = String(format: "%.2f", result3.confidence*100)+"%"
 
             self.segmentedControl.isHidden = false
+            self.button.isHidden = false
             self.lblcorrectionResult.isHidden = true
             self.segmentedControl.setTitle(self.result1, forSegmentAt: 0)
             self.segmentedControl.setTitle(self.result2, forSegmentAt: 1)
