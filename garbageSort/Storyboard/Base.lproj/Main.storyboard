@@ -3,7 +3,7 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -519,8 +519,8 @@
         <scene sceneID="0MS-Kp-JIN">
             <objects>
                 <viewController storyboardIdentifier="scan" modalPresentationStyle="fullScreen" id="IJD-Vk-vwn" customClass="ScanViewController" customModule="garbageSort" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="5Ab-p2-uxc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="227"/>
+                    <view key="view" contentMode="scaleToFill" id="5Ab-p2-uxc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="scanpage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="mI6-7R-zMX">
@@ -552,8 +552,8 @@
                                     <constraint firstAttribute="height" constant="220" id="YMi-u1-riK"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cx5-Z9-he9">
-                                <rect key="frame" x="107" y="409" width="161" height="184"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cx5-Z9-he9">
+                                <rect key="frame" x="107" y="409" width="161" height="147"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpc-6b-ynI">
                                 <rect key="frame" x="0.0" y="328" width="372" height="33"/>
@@ -590,12 +590,15 @@
                                 <color key="textColor" systemColor="systemPinkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AEl-nz-nDe">
-                                <rect key="frame" x="104" y="600" width="166" height="30"/>
-                                <color key="backgroundColor" systemColor="linkColor"/>
-                                <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="17"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AEl-nz-nDe">
+                                <rect key="frame" x="97" y="604" width="191" height="30"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="v5g-1Y-C4U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="19"/>
                                 <state key="normal" title="Report if it's wrong">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="KO2-HW-JAw" kind="presentation" identifier="image" id="aag-8M-Npb"/>
@@ -609,20 +612,18 @@
                             <constraint firstItem="mvU-xG-puL" firstAttribute="centerX" secondItem="5Ab-p2-uxc" secondAttribute="centerX" id="2th-xD-mON"/>
                             <constraint firstItem="xpc-6b-ynI" firstAttribute="trailing" secondItem="hUi-UO-65e" secondAttribute="trailing" id="3UI-dP-ZM5"/>
                             <constraint firstItem="xpc-6b-ynI" firstAttribute="trailing" secondItem="udN-S8-7BW" secondAttribute="trailing" id="3Yn-6f-Buq"/>
+                            <constraint firstItem="AEl-nz-nDe" firstAttribute="top" secondItem="cx5-Z9-he9" secondAttribute="bottom" constant="48" id="3sU-XM-24S"/>
                             <constraint firstItem="cx5-Z9-he9" firstAttribute="leading" secondItem="Iil-to-sna" secondAttribute="leading" constant="107" id="6pR-Go-BLE"/>
-                            <constraint firstAttribute="bottom" secondItem="xpc-6b-ynI" secondAttribute="bottom" constant="266" id="8Aa-6E-8ka"/>
                             <constraint firstItem="HNs-FN-b8C" firstAttribute="centerX" secondItem="cx5-Z9-he9" secondAttribute="centerX" id="95j-Om-eYg"/>
                             <constraint firstItem="mvU-xG-puL" firstAttribute="centerX" secondItem="AEl-nz-nDe" secondAttribute="centerX" id="A6Q-tL-Cli"/>
                             <constraint firstItem="mvU-xG-puL" firstAttribute="leading" secondItem="Iil-to-sna" secondAttribute="leading" id="Az5-sb-kWd"/>
                             <constraint firstItem="AEl-nz-nDe" firstAttribute="centerX" secondItem="cx5-Z9-he9" secondAttribute="centerX" id="BDB-cf-xDl"/>
+                            <constraint firstItem="AEl-nz-nDe" firstAttribute="leading" secondItem="5Ab-p2-uxc" secondAttribute="leadingMargin" constant="68" id="EBM-tl-knm"/>
                             <constraint firstItem="udN-S8-7BW" firstAttribute="centerY" secondItem="Qoy-ax-7qe" secondAttribute="centerY" id="ERj-kd-IpF"/>
                             <constraint firstItem="mvU-xG-puL" firstAttribute="leading" secondItem="mI6-7R-zMX" secondAttribute="leading" id="GV4-W6-h5e"/>
                             <constraint firstItem="mvU-xG-puL" firstAttribute="leading" secondItem="Qoy-ax-7qe" secondAttribute="leading" id="IPg-PZ-9ui"/>
                             <constraint firstItem="Iil-to-sna" firstAttribute="trailing" secondItem="xpc-6b-ynI" secondAttribute="trailing" constant="3" id="NU9-E7-Rui"/>
-                            <constraint firstItem="Iil-to-sna" firstAttribute="bottom" secondItem="AEl-nz-nDe" secondAttribute="bottom" constant="40" id="Q3N-eH-dZj"/>
                             <constraint firstItem="hUi-UO-65e" firstAttribute="top" secondItem="HNs-FN-b8C" secondAttribute="bottom" constant="8" id="Sap-DA-frb"/>
-                            <constraint firstItem="AEl-nz-nDe" firstAttribute="top" secondItem="cx5-Z9-he9" secondAttribute="bottom" constant="1" id="T5q-U5-BiQ"/>
-                            <constraint firstItem="cx5-Z9-he9" firstAttribute="top" secondItem="xpc-6b-ynI" secondAttribute="bottom" constant="8" id="Vg2-aQ-9JN"/>
                             <constraint firstItem="mvU-xG-puL" firstAttribute="trailing" secondItem="Qoy-ax-7qe" secondAttribute="trailing" id="YKr-fC-dgC"/>
                             <constraint firstItem="xpc-6b-ynI" firstAttribute="top" secondItem="hUi-UO-65e" secondAttribute="bottom" constant="8" id="Ygc-tn-ecp"/>
                             <constraint firstItem="mvU-xG-puL" firstAttribute="top" secondItem="Iil-to-sna" secondAttribute="top" id="bUh-sb-Mlo"/>
@@ -634,7 +635,9 @@
                             <constraint firstItem="mvU-xG-puL" firstAttribute="centerX" secondItem="cx5-Z9-he9" secondAttribute="centerX" id="kLP-Hw-ecR"/>
                             <constraint firstItem="mvU-xG-puL" firstAttribute="trailing" secondItem="HNs-FN-b8C" secondAttribute="trailing" id="lYW-j9-C47"/>
                             <constraint firstItem="mI6-7R-zMX" firstAttribute="top" secondItem="mvU-xG-puL" secondAttribute="bottom" id="ssF-rY-5fJ"/>
+                            <constraint firstItem="cx5-Z9-he9" firstAttribute="top" secondItem="5Ab-p2-uxc" secondAttribute="top" constant="409" id="vS6-4F-RKE"/>
                             <constraint firstItem="mvU-xG-puL" firstAttribute="leading" secondItem="HNs-FN-b8C" secondAttribute="leading" id="vyB-zS-qZ7"/>
+                            <constraint firstItem="AEl-nz-nDe" firstAttribute="top" secondItem="5Ab-p2-uxc" secondAttribute="top" constant="604" id="zjm-C2-b8L"/>
                         </constraints>
                     </view>
                     <connections>
@@ -706,8 +709,8 @@
         <scene sceneID="UjW-Mu-igu">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="KO2-HW-JAw" customClass="AnalysisViewController" customModule="garbageSort" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="I9J-Gd-4bH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="227"/>
+                    <view key="view" contentMode="scaleToFill" id="I9J-Gd-4bH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1G-1N-FRq">
@@ -722,7 +725,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Help us to figure this out :)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59e-Vj-I7U">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help us to figure this out :)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59e-Vj-I7U">
                                 <rect key="frame" x="0.0" y="354" width="375" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="K58-fq-1p6"/>
@@ -731,7 +734,7 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="alp-pZ-E7V">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="alp-pZ-E7V">
                                 <rect key="frame" x="72" y="116" width="231" height="230"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry we cannot recognize this" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNm-MU-Ycr">
@@ -740,7 +743,7 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xgf-dm-Cng">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xgf-dm-Cng">
                                 <rect key="frame" x="0.0" y="440" width="375" height="227"/>
                                 <connections>
                                     <segue destination="thr-Qm-b2c" kind="embed" identifier="ToClildVC" id="YMS-3u-I45"/>
@@ -876,7 +879,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="YMS-3u-I45"/>
         <segue reference="ISe-YN-tvl"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -887,9 +889,6 @@
         <image name="elephant.png" width="347" height="344"/>
         <image name="lion.png" width="576" height="576"/>
         <image name="scanpage.jpg" width="960" height="1440"/>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
