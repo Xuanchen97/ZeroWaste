@@ -74,9 +74,8 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             self.lblcorrectionResult.text = mainDelegate.gn!
             self.readDisposalRules(ScanedItem: self.ScanedItem)
         }
-        button.layer.cornerRadius = 3
-        button.backgroundColor = UIColor.systemBlue
-        button.tintColor = UIColor.systemRed
+        button.layer.cornerRadius = 4
+        //button.backgroundColor = UIColor.systemBlue
     }
     
     // image Picker dekegate method
