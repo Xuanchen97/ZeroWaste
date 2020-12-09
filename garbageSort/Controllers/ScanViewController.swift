@@ -5,7 +5,7 @@
 //  Created Xuanchen Liu on 2020-03-09.
 //  Copyright © 2020 ZeroWaste. All rights reserved.
 //
-//  Description: This controller is for the garbage scaning feature. Implement the well-trained              model. Machine learning and Artificial Intellgence.
+//  Description: This controller is for the garbage scaning feature. Implement the well-trained model. Machine learning and Artificial Intellgence.
 //
 //  Author: Xuanchen Liu & Haoyue Wang
 

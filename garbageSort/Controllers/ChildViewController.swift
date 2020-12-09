@@ -5,7 +5,7 @@
 //  Created by Haoyue Wang on 2020-10-12.
 //  Copyright © 2020 ZeroWaste. All rights reserved.
 //
-//  Description: This is AnalysisViewController's child controller where it contains all the                 logic for 20 questions
+//  Description: This is AnalysisViewController's child controller where it contains all the logic for 20 questions
 //
 //  Author: Haoyue Wang
 
