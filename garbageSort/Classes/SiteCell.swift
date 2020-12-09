@@ -3,7 +3,7 @@
 //  XuanchenLiu_FinalExam
 //
 //  Created by Xuanchen Liu on 2020-04-06.
-//  Copyright © 2020 Xuanchen Liu. All rights reserved.
+//  Copyright © 2020 ZeroWaste. All rights reserved.
 //
 import UIKit
 

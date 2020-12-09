@@ -3,7 +3,7 @@
 //  garbageSort
 //
 //  Created by Xuanchen Liu on 2020-04-15.
-//  Copyright © 2020 Xuanchen Liu. All rights reserved.
+//  Copyright © 2020 ZeroWaste. All rights reserved.
 //
 
 import UIKit
@@ -16,15 +16,11 @@ class AboutViewController: UIViewController {
        
        override func viewDidLoad() {
            super.viewDidLoad()
-
-           // Do any additional setup after loading the view.
-           
-           // tell webview to display a website
-
            // deprecated - using UIWebview
-          let urlAddress = URL(string: "https://www.goingzerowaste.com")
+          let urlAddress = URL(string: "https://github.com/Xuanchen97/ZeroWaste/blob/master/README.md")
            let url = URLRequest(url: urlAddress!)
            wbPage?.loadRequest(url as URLRequest)
+        
     
        }
        
