@@ -149,7 +149,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             self.segmentedControl.setTitle(self.result1, forSegmentAt: 0)
             self.segmentedControl.setTitle(self.result2, forSegmentAt: 1)
             self.segmentedControl.setTitle(self.result3, forSegmentAt: 2)
-         
+            self.segmentedControl.selectedSegmentIndex = 0
         }
         let handler = VNImageRequestHandler(ciImage: garbageImage)
         do {
