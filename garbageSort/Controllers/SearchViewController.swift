@@ -5,8 +5,8 @@
 //  Created by Haoyue Wang on 2020-11-22.
 //  Copyright © 2020 ZeroWaste. All rights reserved.
 //
-//  Description: In this controller, Haoyue Wang was responsible for displaying the region                   disposal rules into the table view with the button to link outside website.
-//               Xuanchen Liu was responsible for build the API connection with 'Geocoder' to                find the proper city by entering the Postal code.
+//  Description: In this controller, Haoyue Wang was responsible for displaying the region               disposal rules into the table view with the button to link outside                      website.
+//               Xuanchen Liu was responsible for build the API connection with 'Geocoder'               to find the proper city by entering the Postal code.
 //
 //  Author: Haoyue Wang & Xuanchen Liu
 
