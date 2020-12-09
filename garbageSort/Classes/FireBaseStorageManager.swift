@@ -3,7 +3,7 @@
 //  garbageSort
 //
 //  Created by Saam Haghighat on 2020-11-23.
-//  Copyright © 2020 Xuanchen Liu. All rights reserved.
+//  Copyright © 2020 ZeroWaste. All rights reserved.
 //
 
 import Foundation

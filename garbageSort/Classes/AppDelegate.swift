@@ -2,7 +2,7 @@
 //  garbageSort
 //
 //  Created by Haoyue Wang on 2020-03-09.
-//  Copyright © 2020 Haoyue Wang. All rights reserved.
+//  Copyright © 2020 ZeroWaste. All rights reserved.
 //
 //  Desciption: This class use for SQLite DB - Create, Insert
 //  Author: Haoyue Wang

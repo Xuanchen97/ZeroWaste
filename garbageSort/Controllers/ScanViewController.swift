@@ -3,9 +3,8 @@
 //  garbageSort
 //
 //  Created Xuanchen Liu on 2020-03-09.
-//  Copyright © 2020 Haoyue Wang. All rights reserved.
-//
-//  Description: This controller is for the scan the garbage. Implement the well-trained model. Machine learning and Artificial Intellgence
+//  Copyright © 2020 ZeroWaste. All rights reserved.
+//  Description: This controller is for the garbage scaning feature. Implement the well-trained model. Machine learning and Artificial Intellgence.
 //
 //  Author: Xuanchen Liu
 
@@ -160,7 +159,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             print(error)
         }
     }
-    
+    // func to redate the data from the firestore database
     func readDisposalRules(ScanedItem: String) {
         let db = Firestore.firestore()
         
@@ -192,7 +191,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         }
     }
     
-    
+    // func to update the segment control
     @IBAction func resultChanged(_ sender: Any) {
         switch segmentedControl.selectedSegmentIndex
         {
@@ -213,6 +212,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         }
     }
     
+    // launch the camera
     @IBAction func cameraTapped(_ sender: UIBarButtonItem) {
          present(imagePicker, animated: true, completion: nil)
     }
@@ -223,11 +223,13 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             ac.newImage = self.pickedImage
         }
     }
+    //Store the image into the user default
     private func storeImage(image: UIImage, forKey key: String) {
         if let pngRepresentation = image.pngData() {
             UserDefaults.standard.set(pngRepresentation, forKey: key)
         }
     }
+    // retrieve the image
     private func retrieveImage(forKey key: String) -> UIImage? {
             if let imageData = UserDefaults.standard.object(forKey: key) as? Data,
                 let image = UIImage(data: imageData) {

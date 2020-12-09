@@ -3,8 +3,9 @@
 //  garbageSort
 
 //  Created by Xuanchen Liu on 2020-03-27.
-//  Copyright © 2020 Xuanchen Liu. All rights reserved.
+//  Copyright © 2020 ZeroWaste. All rights reserved.
 //
+// Description: AR Page provides a way for using to play the video on our handbook.
 
 import UIKit
 import SceneKit

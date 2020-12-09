@@ -4,7 +4,7 @@
 //  garbageSort
 //
 //  Created by Saam Haghighat on 2020-04-13.
-//  Copyright © 2020 Saam Haghighat. All rights reserved.
+//  Copyright © 2020 ZeroWaste. All rights reserved.
 //
 import UIKit
 import MapKit
