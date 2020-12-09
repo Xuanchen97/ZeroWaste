@@ -4,8 +4,10 @@
 //
 //  Created by Haoyue Wang on 2020-11-22.
 //  Copyright © 2020 ZeroWaste. All rights reserved.
-//  Description: In this controller, Haoyue Wang was responsible for displaying the region disposal rules into the table view with the button to link outside website.
-//  Xuanchen Liu was responsible for build the API connection with 'Geocoder' to find the proper city by entering the Postal code.
+//
+//  Description: In this controller, Haoyue Wang was responsible for displaying the region                   disposal rules into the table view with the button to link outside website.
+//               Xuanchen Liu was responsible for build the API connection with 'Geocoder' to                find the proper city by entering the Postal code.
+//
 //  Author: Haoyue Wang & Xuanchen Liu
 
 import UIKit
@@ -29,6 +31,8 @@ class SearchViewController: UIViewController, UITableViewDataSource,
     var isExpanded = false
     var currentLoc = ""
     var postalCode = ""
+    
+    //display the table and get current region
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,16 +41,19 @@ class SearchViewController: UIViewController, UITableViewDataSource,
         
     }
     
+    //display the number of rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int)
             -> Int {
         return (sectionData[section]?.count)!
     }
     
+    //display the title of each section
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int)
             -> String? {
         return sections[section]
     }
     
+    //control table cell's height
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if self.selectedIndex == indexPath.row && isExpanded == true && indexPath.section == 1{
             return 206
@@ -55,10 +62,12 @@ class SearchViewController: UIViewController, UITableViewDataSource,
         }
     }
     
+    //display the number of sections
     func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
     }
-        
+    
+    //display the content of each cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)
             -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
@@ -142,6 +151,7 @@ class SearchViewController: UIViewController, UITableViewDataSource,
         }
     }
     
+    //control the cell whether it's expanded or closed
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
       
@@ -170,6 +180,7 @@ class SearchViewController: UIViewController, UITableViewDataSource,
         return true;
     }
     
+    //when user swipe right, a view more button section appeared. It's a clickable link to offical website. Each cell is different.
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         if indexPath.section == 1 {
             let contextItem = UIContextualAction(style: .destructive, title: "View More") { (contextualAction, view, boolValue) in

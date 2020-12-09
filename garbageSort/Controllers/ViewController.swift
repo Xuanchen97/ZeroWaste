@@ -5,6 +5,9 @@
 //  Created Xuanchen Liu on 2020-03-09.
 //  Copyright © 2020 ZeroWaste. All rights reserved.
 //
+//  Description: This view controller is for the main page where every function can direct from              this page. It shows all regions as dropdown for users to choose.
+//
+//  Author: Haoyue Wang
 
 import UIKit
 import SceneKit
@@ -22,7 +25,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     let mainDelegate = UIApplication.shared.delegate as! AppDelegate
     
-    //@IBOutlet weak var citiesBarButton: UIBarButtonItem!
     @IBOutlet weak var citiesBarButton: UIButton!
     @IBOutlet var city : UIButton!
     let cityMenu = DropDown()
