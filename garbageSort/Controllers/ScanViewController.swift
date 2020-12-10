@@ -5,9 +5,14 @@
 //  Created Xuanchen Liu on 2020-03-09.
 //  Copyright © 2020 ZeroWaste. All rights reserved.
 //
-//  Description: This controller is for the garbage scaning feature. Implement the well-trained model. Machine learning and Artificial Intellgence.
+//  Description: This controller is for the garbage scaning feature. Implement the well-trained model. Machine learning and Artificial Intellgence. Search the scaned object from trained ML Model and pass to firestore database to check the disposal rules.
+//  Xuanchen Liu was responsible for looking for the image was classified in the ML Model, retrieving and matching the disposal rule from the firestore database
+
+//  Haoyue Wang was responsible for the data passing between outsides controllers and created the segments controller for the scaned result
+
+//  Saam Haghighat was responsible for pull up the camera and store the image into the user default
 //
-//  Author: Xuanchen Liu & Haoyue Wang
+//  Author: Xuanchen Liu & Haoyue Wang & Saam Haghighat
 
 import UIKit
 import CoreML
@@ -116,7 +121,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             self.ScanedItem = self.garbageName!
         
             
-          //  self.requestInfo(garbageName: result.identifier)
+            //self.requestInfo(garbageName: result.identifier)
             
             self.result1 = result1.identifier.capitalized
             print(String(format: "%.2f", result1.confidence))
@@ -160,7 +165,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             print(error)
         }
     }
-    // func to redate the data from the firestore database
+    // func to read the data from the firestore database
     func readDisposalRules(ScanedItem: String) {
         let db = Firestore.firestore()
         
@@ -224,12 +229,14 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             ac.newImage = self.pickedImage
         }
     }
+    
     //Store the image into the user default
     private func storeImage(image: UIImage, forKey key: String) {
         if let pngRepresentation = image.pngData() {
             UserDefaults.standard.set(pngRepresentation, forKey: key)
         }
     }
+    
     // retrieve the image
     private func retrieveImage(forKey key: String) -> UIImage? {
             if let imageData = UserDefaults.standard.object(forKey: key) as? Data,

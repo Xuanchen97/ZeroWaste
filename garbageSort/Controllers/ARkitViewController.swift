@@ -5,7 +5,8 @@
 //  Created by Xuanchen Liu on 2020-03-27.
 //  Copyright © 2020 ZeroWaste. All rights reserved.
 //
-// Description: AR Page provides a way for using to play the video on our handbook.
+//  Description: AR Page provides a way to play the video on handbook's image.
+//  Author: Xuanchen Liu
 
 import UIKit
 import SceneKit
@@ -72,15 +73,15 @@ class ARkitViewController:UIViewController, ARSCNViewDelegate {
             videoScene.addChild(videoNode)
             
             
-            let plane = SCNPlane(width: imageAnchor.referenceImage.physicalSize.width, height: imageAnchor.referenceImage.physicalSize.height)
+            let object = SCNPlane(width: imageAnchor.referenceImage.physicalSize.width, height: imageAnchor.referenceImage.physicalSize.height)
             
-            plane.firstMaterial?.diffuse.contents = videoScene
+            object.firstMaterial?.diffuse.contents = videoScene
             
-            let planeNode = SCNNode(geometry: plane)
+            let objectNode = SCNNode(geometry: object)
             
-            planeNode.eulerAngles.x = -.pi / 2
+            objectNode.eulerAngles.x = -.pi / 2
             
-            node.addChildNode(planeNode)
+            node.addChildNode(objectNode)
             
         }
         

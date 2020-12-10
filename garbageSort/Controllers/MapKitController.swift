@@ -5,7 +5,9 @@
 //
 //  Created by Saam Haghighat on 2020-04-13.
 //  Copyright © 2020 ZeroWaste. All rights reserved.
-//
+//  Description: MapKit Page provides maps information for the user, if they decide to take a look at or visit a local waste facility.
+//  Author: Saam Haghighat
+
 import UIKit
 import MapKit
 import Contacts

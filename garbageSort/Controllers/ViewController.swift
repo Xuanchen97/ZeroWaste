@@ -5,7 +5,7 @@
 //  Created Xuanchen Liu on 2020-03-09.
 //  Copyright © 2020 ZeroWaste. All rights reserved.
 //
-//  Description: This view controller is for the main page where every function can direct from              this page. It shows all regions as dropdown for users to choose.
+//  Description: This view controller is for the main page where every function can direct from this page. It shows all regions as dropdown for users to choose.
 //
 //  Author: Haoyue Wang
 
@@ -44,24 +44,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBAction func unwindToHomeVC(sender : UIStoryboardSegue){
         mainDelegate.CIImage = nil
     }
-    
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(true)
-//        
-//        if(mainDelegate.loginFlag){
-//            AR.isEnabled = true
-//            AR.alpha = 1
-//            AI.isEnabled = true
-//            AI.alpha = 1
-//        }
-//        else{
-//            AR.isEnabled = false
-//            AR.alpha = 0.5
-//            AI.isEnabled = false
-//            AI.alpha = 0.5
-//        }
-//    }
-//
   
     
     override func viewDidLoad() {
