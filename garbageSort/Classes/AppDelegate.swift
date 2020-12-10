@@ -4,7 +4,7 @@
 //  Created by Haoyue Wang on 2020-03-09.
 //  Copyright © 2020 ZeroWaste. All rights reserved.
 //
-//  Desciption: This class use for SQLite DB - Create, Insert
+//  Desciption: This class use for SQLite DB - Create, Insert and firebase and save current                 region, image and garbage type
 //  Author: Haoyue Wang
 
 import UIKit

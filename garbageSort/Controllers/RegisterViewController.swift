@@ -2,8 +2,8 @@
 //  RegisterViewController.swift
 //  garbageSort
 //
-//  Created by Xcode User on 2020-04-11.
-//  Copyright © 2020 Haoyue Wang. All rights reserved.
+//  Created by Haoyue Wang on 2020-04-11.
+//  Copyright © 2020 ZeroWaste. All rights reserved.
 //
 //  Description: This controller is for user register. then if every field is not empty
 //               it will saved to db
