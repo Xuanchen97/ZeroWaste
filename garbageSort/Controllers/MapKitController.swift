@@ -18,6 +18,13 @@ class MapKitController: UIViewController, CLLocationManagerDelegate, MKMapViewDe
     private var currentRoute: MKRoute!
     @IBOutlet weak var mapview : MKMapView!
     
+    //function to zoom to user location
+    public func zoomToLatestLocation(with coordinate: CLLocationCoordinate2D)
+    {
+        let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 30000, longitudinalMeters: 30000)
+        mapview.setRegion(region, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureLocationServices()
@@ -27,6 +34,7 @@ class MapKitController: UIViewController, CLLocationManagerDelegate, MKMapViewDe
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
         // Do any additional s  etup after loading the view.
+        
     }
     
     //function to update location and allow for location access
@@ -42,6 +50,7 @@ class MapKitController: UIViewController, CLLocationManagerDelegate, MKMapViewDe
             mapview.showsUserLocation = true
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
+            zoomToLatestLocation(with: locationManager.location!.coordinate)
         }
     }
     
@@ -52,12 +61,7 @@ class MapKitController: UIViewController, CLLocationManagerDelegate, MKMapViewDe
         locationManager.startUpdatingLocation()
     }
     
-    //function to zoom to user location
-    public func zoomToLatestLocation(with coordinate: CLLocationCoordinate2D)
-    {
-        let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 10000, longitudinalMeters: 10000)
-        mapview.setRegion(region, animated: true)
-    }
+
     
     //function for adding annotated locations on map
     private func addAnnotations(){
@@ -153,20 +157,21 @@ class MapKitController: UIViewController, CLLocationManagerDelegate, MKMapViewDe
     
     //checking for location updates
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print("Did get latest location")
+      //  print("Did get latest location")
         addAnnotations()
         
         guard let latestLocation = locations.first else {return}
         
         //constructRoute(userLocation: latestLocation.coordinate)
-        //zoomToLatestLocation(with: latestLocation.coordinate)
+
         currentLocation = latestLocation.coordinate
+      // zoomToLatestLocation(with: latestLocation.coordinate)
         //if(currentLocation == nil) {}
     }
     
     //checking if location services have been authorized
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        print("The status has changed")
+      //  print("The status has changed")
         addAnnotations()
         if (status == .authorizedAlways || status == .authorizedWhenInUse) {
             beginLocationUpdates(locationManager: manager)
